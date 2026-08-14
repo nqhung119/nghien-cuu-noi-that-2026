@@ -30,24 +30,24 @@
 
 [data-theme="dark"] {
   color-scheme: dark;
-  --bg: #111713;
-  --surface: #17201a;
-  --surface-muted: #202a23;
-  --surface-hover: #28352d;
+  --bg: #000000;
+  --surface: #0d100e;
+  --surface-muted: #151915;
+  --surface-hover: #1d221e;
   --text: #f4f4ef;
-  --text-muted: #a9b3ac;
-  --border: #304038;
-  --border-strong: #526159;
+  --text-muted: #a2aca5;
+  --border: #232823;
+  --border-strong: #3c453e;
   --accent: #91c4a7;
   --accent-hover: #b2d9c2;
-  --accent-soft: #263c30;
-  --accent-contrast: #102017;
+  --accent-soft: #17251d;
+  --accent-contrast: #05100a;
   --success: #91c4a7;
   --warning: #d3b66c;
   --danger: #db9292;
   --warm: #d69b75;
-  --shadow: 0 18px 52px rgba(0, 0, 0, 0.32);
-  --shadow-soft: 0 8px 28px rgba(0, 0, 0, 0.22);
+  --shadow: 0 18px 52px rgba(0, 0, 0, 0.6);
+  --shadow-soft: 0 8px 28px rgba(0, 0, 0, 0.45);
 }
 
 * {
@@ -1813,7 +1813,7 @@ tbody tr:hover {
 }
 
 .home-hero-content {
-  width: min(650px, 72%);
+  width: min(720px, 76%);
   padding: 76px 60px 156px;
 }
 
@@ -1836,13 +1836,14 @@ tbody tr:hover {
 }
 
 .home-hero h1 {
-  max-width: 630px;
+  max-width: 19ch;
   margin: 18px 0 18px;
   color: #fff;
-  font-size: clamp(40px, 5.1vw, 66px);
+  font-size: clamp(34px, 3.9vw, 54px);
   font-weight: 710;
-  letter-spacing: -0.055em;
-  line-height: 1.02;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+  text-wrap: balance;
 }
 
 .home-hero-content > p {
@@ -1851,6 +1852,7 @@ tbody tr:hover {
   color: rgba(255, 255, 255, 0.78);
   font-size: 15px;
   line-height: 1.7;
+  text-wrap: pretty;
 }
 
 .home-hero-actions {
@@ -2379,8 +2381,13 @@ tbody tr:hover {
   }
 
   .home-hero-content {
-    width: min(680px, 88%);
+    width: min(680px, 90%);
     padding: 58px 34px 170px;
+  }
+
+  .home-hero h1 {
+    max-width: 17ch;
+    font-size: clamp(32px, 5.2vw, 44px);
   }
 
   .home-hero-stats {
@@ -2491,8 +2498,10 @@ tbody tr:hover {
   }
 
   .home-hero h1 {
+    max-width: none;
     margin-top: 14px;
-    font-size: clamp(36px, 11.5vw, 46px);
+    font-size: clamp(28px, 8.4vw, 38px);
+    letter-spacing: -0.035em;
   }
 
   .home-hero-content > p {

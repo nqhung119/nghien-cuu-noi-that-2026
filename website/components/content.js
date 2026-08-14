@@ -236,7 +236,7 @@
         '<img class="home-hero-image" src="assets/guides/apartment-overview-hero.webp" alt="Không gian phòng khách, bàn ăn và bếp của căn hộ mẫu" fetchpriority="high" decoding="async">' +
         '<div class="home-hero-shade" aria-hidden="true"></div>' +
         '<div class="home-hero-content"><span class="home-hero-kicker">Căn hộ 61 m² · Đã ẩn danh</span>' +
-          '<h1 class="document-title" id="home-title">Một nơi để chốt đúng<br>từng quyết định nội thất.</h1>' +
+          '<h1 class="document-title" id="home-title">Một nơi để chốt đúng từng quyết định nội thất.</h1>' +
           '<p>Từ nhu cầu đến vật liệu, dự toán và nghiệm thu — toàn bộ dữ liệu căn hộ 61 m² được tổ chức để so sánh nhanh và triển khai rõ ràng.</p>' +
           '<div class="home-hero-actions"><a class="button is-primary is-large" href="#/doc/02-phong-khach-overview">Khám phá không gian</a>' +
           '<a class="button is-glass is-large" href="#/selection">Xem bộ phương án</a></div>' +

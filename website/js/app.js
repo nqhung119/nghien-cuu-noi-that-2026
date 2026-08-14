@@ -70,7 +70,7 @@
       ? '<svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.25"></circle><path d="M10 2v1.5M10 16.5V18M2 10h1.5M16.5 10H18M4.35 4.35l1.1 1.1M14.55 14.55l1.1 1.1M15.65 4.35l-1.1 1.1M5.45 14.55l-1.1 1.1"></path></svg>'
       : '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16.25 12.45A6.5 6.5 0 0 1 7.55 3.75 6.5 6.5 0 1 0 16.25 12.45Z"></path></svg>';
     const themeColor = document.querySelector('meta[name="theme-color"]');
-    if (themeColor) themeColor.setAttribute("content", selected === "dark" ? "#111713" : "#f6f5f1");
+    if (themeColor) themeColor.setAttribute("content", selected === "dark" ? "#000000" : "#f6f5f1");
     button.setAttribute("aria-label", selected === "dark" ? "Chuyển sang giao diện sáng" : "Chuyển sang giao diện tối");
     button.title = selected === "dark" ? "Giao diện sáng" : "Giao diện tối";
   }
@@ -93,8 +93,7 @@
     KB.Search.init(data, KB.maps);
     KB.Content.init(data, KB.maps);
 
-    const preferredTheme = localStorage.getItem("kb-theme") ||
-      (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    const preferredTheme = localStorage.getItem("kb-theme") || "dark";
     setTheme(preferredTheme);
     document.getElementById("theme-toggle").addEventListener("click", function () {
       setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
