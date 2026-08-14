@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Cẩm nang lựa chọn nội thất, vật tư và dự toán cho căn hộ mẫu đã ẩn danh">
+  <meta name="theme-color" content="#f6f5f1">
+  <title>Căn hộ mẫu | Cẩm nang nội thất</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Bỏ qua đến nội dung</a>
+
+  <header class="app-header">
+    <div class="brand-block">
+      <button class="icon-button mobile-menu-button" id="mobile-menu-button" type="button" aria-label="Mở mục lục" aria-controls="sidebar" aria-expanded="false">
+        <span aria-hidden="true">≡</span>
+      </button>
+      <a class="brand-link" href="#/doc/home" aria-label="Về trang bắt đầu">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" role="img">
+            <path d="M7 25V7h18v18H7Zm5-13h8v8h-8v-8Z"></path>
+          </svg>
+        </span>
+        <span class="brand-copy">
+          <span class="brand-name">Căn hộ mẫu</span>
+          <span class="brand-meta">Interior decision hub</span>
+        </span>
+      </a>
+      <span class="brand-status">Đang lập phương án</span>
+    </div>
+
+    <div class="header-center">
+      <nav class="breadcrumb" id="header-breadcrumb" aria-label="Breadcrumb"></nav>
+    </div>
+
+    <div class="header-actions">
+      <button class="search-trigger" id="search-trigger" type="button" aria-haspopup="dialog">
+        <span class="search-icon" aria-hidden="true"></span>
+        <span class="search-label">Tìm hạng mục, vật liệu…</span>
+        <kbd>Ctrl K</kbd>
+      </button>
+      <a class="selection-trigger" id="selection-trigger" href="#/selection" aria-label="Phương án đã chọn: 0 hạng mục">
+        <svg class="selection-trigger-icon" viewBox="0 0 20 20" aria-hidden="true">
+          <path d="M6.5 2.75h7M5 5.25h10a1 1 0 0 1 1 1v10H4v-10a1 1 0 0 1 1-1Z"></path>
+          <path d="m7 10 2 2 4-4"></path>
+        </svg>
+        <span class="selection-trigger-label">Bộ phương án</span>
+        <span class="selection-count" id="selection-count">0</span>
+      </a>
+      <button class="icon-button" id="theme-toggle" type="button" aria-label="Chuyển giao diện sáng hoặc tối">
+        <span class="theme-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Điều hướng tài liệu">
+      <div class="sidebar-head-row">
+        <div>
+          <span class="sidebar-kicker">Căn hộ 61 m²</span>
+          <p class="sidebar-heading">Danh mục dự án</p>
+        </div>
+        <button class="button sidebar-close" id="sidebar-close" type="button">Đóng</button>
+      </div>
+      <nav class="sidebar-nav" id="sidebar-nav"></nav>
+      <footer class="sidebar-footer" id="sidebar-footer"></footer>
+    </aside>
+
+    <button class="sidebar-overlay" id="sidebar-scrim" type="button" aria-label="Đóng mục lục"></button>
+
+    <main class="main-stage" id="main-content" tabindex="-1">
+      <article class="document" id="document" aria-live="polite">
+        <div class="document-loading">Đang tải cơ sở dữ liệu…</div>
+      </article>
+    </main>
+
+    <aside class="toc-panel" aria-label="Mục lục trên trang">
+      <p class="toc-title">Nội dung trang</p>
+      <nav class="toc-nav" id="page-toc"></nav>
+    </aside>
+  </div>
+
+  <dialog class="search-dialog" id="search-dialog" aria-labelledby="search-dialog-title">
+    <div class="search-shell">
+      <h2 class="sr-only" id="search-dialog-title">Tìm kiếm tài liệu</h2>
+      <div class="search-input-row">
+        <input class="search-input" id="search-input" type="search" autocomplete="off" spellcheck="false" placeholder="Tìm phòng, hạng mục, vật liệu, sản phẩm…" aria-label="Tìm kiếm">
+        <button class="button" id="search-close" type="button">Đóng</button>
+      </div>
+      <div class="search-results" id="search-results" role="listbox"></div>
+      <footer class="search-footer">
+        <span>↑ ↓ chọn · Enter mở</span>
+        <span id="search-help">Tìm không phân biệt dấu</span>
+      </footer>
+    </div>
+  </dialog>
+
+  <div class="sr-only" id="selection-live" aria-live="polite"></div>
+
+  <noscript>Trang này cần JavaScript để đọc và điều hướng cơ sở dữ liệu.</noscript>
+  <script defer src="data/catalog.js"></script>
+  <script defer src="js/utils.js"></script>
+  <script defer src="js/markdown.js"></script>
+  <script defer src="js/export.js"></script>
+  <script defer src="components/sidebar.js"></script>
+  <script defer src="components/search.js"></script>
+  <script defer src="components/toc.js"></script>
+  <script defer src="components/selection.js"></script>
+  <script defer src="components/content.js"></script>
+  <script defer src="js/app.js"></script>
+</body>
+</html>

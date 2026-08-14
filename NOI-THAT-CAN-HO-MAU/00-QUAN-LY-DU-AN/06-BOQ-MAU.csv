@@ -1,0 +1,3 @@
+boq_id,item_id,option_id,room,type,description,specification,quantity,unit,waste_pct,unit_material_price,material_total,installation_total,accessory_total,transport_total,tax_total,contingency_total,grand_total,supplier,quote_date,status,notes
+BOQ-001,KIT-CAB,KIT-CAB-03,KIT,FIX,Tu bep duoi,MDF chong am melamine; khoang chau WPB; phu kien giam chan,2.40,md,5,0,0,0,0,0,0,0,0,,YYYY-MM-DD,NHU-CAU,Nhap gia da gom/chua gom lap dat
+

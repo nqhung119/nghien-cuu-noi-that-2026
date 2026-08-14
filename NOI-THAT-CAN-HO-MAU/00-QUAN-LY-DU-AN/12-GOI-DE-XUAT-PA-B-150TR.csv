@@ -1,0 +1,34 @@
+line_id,budget_group,item_id,option_id,quantity,unit,budget_cap_vnd,priority,status,note
+PB-001,CONG-VIEC-CHUNG,COM-DESIGN,COM-DESIGN-03,1,goi,3000000,P0,SO-SANH,Do hien trang va shop drawing
+PB-002,CONG-VIEC-CHUNG,COM-SITE,COM-SITE-03,1,goi,4000000,P0,SO-SANH,Che chan van chuyen ve sinh chung cu
+PB-003,CONG-VIEC-CHUNG,COM-ELECTRIC,COM-ELECTRIC-01,1,goi,1000000,P0,SO-SANH,Kiem tra dien hien huu
+PB-004,CONG-VIEC-CHUNG,COM-ELECTRIC,COM-ELECTRIC-04,1,goi,4000000,P0,SO-SANH,Mach rieng tai lon va bo sung can thiet
+PB-005,CONG-VIEC-CHUNG,COM-CEIL,COM-CEIL-02,1,goi,4000000,P1,SO-SANH,Hop rem hoac dai tran cuc bo
+PB-006,CONG-VIEC-CHUNG,COM-PAINT,COM-PAINT-03,1,goi,4000000,P1,SO-SANH,Son khu chung khong vao hai phong ngu
+PB-007,CONG-VIEC-CHUNG,COM-LIGHT,COM-LIGHT-02,1,goi,3000000,P0,SO-SANH,Den nen khu chung
+PB-008,CONG-VIEC-CHUNG,COM-LIGHT,COM-LIGHT-04,1,goi,1000000,P0,SO-SANH,LED duoi tu bep chon loc
+PB-009,SANH,ENT-SHOE,ENT-SHOE-04,1,bo,5500000,P0,SO-SANH,Tu giay cao kich tran
+PB-010,SANH,ENT-ACC,ENT-ACC-02,1,bo,2500000,P1,SO-SANH,Guong ke va cho thay giay gon
+PB-011,PHONG-KHACH,LIV-SOFA,LIV-SOFA-02,1,bo,12000000,P1,SO-SANH,Sofa vai thang trung cap
+PB-012,PHONG-KHACH,LIV-TABLE,LIV-TABLE-02,1,bo,3000000,P1,SO-SANH,Ban tra bo goc gon
+PB-013,PHONG-KHACH,LIV-TVUNIT,LIV-TVUNIT-04,1,bo,11000000,P1,SO-SANH,Ke va mang TV phang tiet che
+PB-014,PHONG-KHACH,LIV-CURTAIN,LIV-CURTAIN-02,1,bo,4000000,P0,SO-SANH,Rem hai lop theo kich thuoc thuc
+PB-015,PHONG-KHACH,LIV-DECOR,LIV-DECOR-02,1,goi,2000000,P1,SO-SANH,Tham de giat va goi tua
+PB-016,PHONG-KHACH,LIV-CLIMATE,LIV-CLIMATE-02,1,bo,3000000,P1,SO-SANH,Quat tran chi lap khi ket cau cho phep
+PB-017,BEP-AN,KIT-CAB,KIT-CAB-04,1,goi,25000000,P0,SO-SANH,Tu tren duoi va tu cao trong gioi han shop drawing
+PB-018,BEP-AN,KIT-TOP,KIT-TOP-02,1,goi,6000000,P0,SO-SANH,Mat granite va op kinh hoac cau hinh tuong duong
+PB-019,BEP-AN,KIT-SINK,KIT-SINK-02,1,bo,3500000,P0,SO-SANH,Chau inox 304 mot ho va voi
+PB-020,BEP-AN,KIT-HDW,KIT-HDW-02,1,goi,2500000,P1,SO-SANH,Phu kien co ban giam chan
+PB-021,BEP-AN,KIT-HOB,KIT-HOB-03,1,thiet-bi,5800000,P0,SO-SANH,Bep doi inverter khoa model truoc khoet da
+PB-022,BEP-AN,KIT-HOOD,KIT-HOOD-02,1,thiet-bi,3200000,P0,SO-SANH,Hut mui am tu va duong ong co ban
+PB-023,BEP-AN,KIT-DINING,KIT-DINING-02,1,bo,7000000,P1,SO-SANH,Ban 1.2-1.4m va bon ghe gon
+PB-024,PHONG-TAM,BAT-WP,BAT-WP-01,1,goi,500000,P0,SO-SANH,Kiem tra va tram kin nhe neu can
+PB-025,PHONG-TAM,BAT-SCREEN,BAT-SCREEN-03,1,bo,3000000,P0,SO-SANH,Cua kinh mo quay neu du cung mo
+PB-026,PHONG-TAM,BAT-VANITY,BAT-VANITY-02,1,bo,2500000,P1,SO-SANH,Tu guong chong nuoc
+PB-027,PHONG-TAM,BAT-VANITY,BAT-VANITY-03,1,bo,2000000,P1,SO-SANH,Tu duoi chau neu tuong thich chau ban giao
+PB-028,PHONG-TAM,BAT-VENT,BAT-VENT-03,1,bo,1000000,P0,SO-SANH,Chi mua sau khi kiem tra duong gio
+PB-029,PHONG-TAM,BAT-ACC,BAT-ACC-02,1,goi,1000000,P1,SO-SANH,Phu kien inox 304 toi thieu
+PB-030,LO-GIA,LOG-CAB,LOG-CAB-03,1,bo,3000000,P1,SO-SANH,Tu tren may giat bang nhom
+PB-031,LO-GIA,LOG-DRY,LOG-DRY-03,1,bo,2000000,P0,SO-SANH,Gian phoi quay tay
+PB-032,DU-PHONG,,,1,goi,15000000,RESERVE,CHUA-CAM-KET,Chi dung cho phat sinh co xac nhan
+

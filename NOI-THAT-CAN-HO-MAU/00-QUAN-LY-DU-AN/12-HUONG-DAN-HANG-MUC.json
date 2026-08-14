@@ -1,0 +1,666 @@
+{
+  "version": 1,
+  "updated": "2026-08-14",
+  "methodNote": "Nội dung dùng để sàng lọc và chuẩn bị câu hỏi khi lấy báo giá; không thay thế khảo sát hiện trạng, shop drawing, mẫu duyệt hoặc hướng dẫn của nhà sản xuất.",
+  "typeGuides": {
+    "FIX": {
+      "label": "Nội thất đóng theo kích thước",
+      "maintenance": "Lau bằng khăn ẩm vắt kỹ, xử lý nước đọng ngay và siết/chỉnh bản lề, ray khi cánh bắt đầu xệ hoặc cạ.",
+      "installation": "Phải đo sau khi hoàn thiện nền–tường, khóa vị trí điện nước và duyệt shop drawing, mẫu bề mặt, cấu tạo cạnh trước sản xuất.",
+      "inspection": "Kiểm tra kích thước, độ vuông, khe cánh, cạnh dán, hậu tủ, neo tường, tải sử dụng và khả năng tiếp cận van–ổ cắm."
+    },
+    "LOO": {
+      "label": "Nội thất mua sẵn hoặc đặt rời",
+      "maintenance": "Vệ sinh theo đúng vật liệu bề mặt; kiểm tra chân, liên kết, nệm hoặc lớp phủ định kỳ và giữ linh kiện thay thế nếu có.",
+      "installation": "Đo cửa, thang máy, bán kính quay và khoảng sử dụng thực; lắp thử tại vị trí trước khi bỏ bao bì hoặc xác nhận nhận hàng.",
+      "inspection": "Kiểm tra độ vững, kích thước, bề mặt, đường may/mối nối, phụ kiện, tiếng kêu và chính sách đổi trả ngay khi giao."
+    },
+    "ELE": {
+      "label": "Thiết bị điện",
+      "maintenance": "Giữ khe thoát nhiệt thông thoáng, vệ sinh lọc/bề mặt theo lịch và dùng dịch vụ chính hãng cho phần điện tử hoặc môi chất.",
+      "installation": "Đối chiếu công suất, điện áp, tiết diện dây, CB, tiếp địa, khoảng thoáng và kích thước lắp thực tế trước khi mua hoặc khoét tủ.",
+      "inspection": "Chạy thử đủ chế độ, đo tiếng ồn/rung bất thường, kiểm tra rò điện, thoát nước, phụ kiện và ghi serial cùng ngày kích hoạt bảo hành."
+    },
+    "ACC": {
+      "label": "Phụ kiện",
+      "maintenance": "Làm sạch bụi và cặn, không dùng hóa chất ăn mòn; siết lại liên kết và thay chi tiết hao mòn trước khi làm hỏng phần tủ/tường.",
+      "installation": "Chọn theo tải, tần suất dùng, môi trường ẩm và nền liên kết; xác định đủ số lượng, mã đồng bộ và dụng cụ cân chỉnh.",
+      "inspection": "Thử tải và toàn bộ hành trình, kiểm tra cạ/kẹt/rơ, lớp mạ, vít neo, mép sắc và khả năng tháo thay."
+    },
+    "MAT": {
+      "label": "Vật liệu hoàn thiện",
+      "maintenance": "Dùng chất vệ sinh tương thích, tránh ngâm nước hoặc chà mài ngoài chỉ dẫn và giữ mẫu/mã lô để sửa cục bộ sau này.",
+      "installation": "Nền phải đạt độ phẳng, khô và sạch theo hệ vật liệu; duyệt mẫu dưới ánh sáng thực, khóa hướng vân, ron, nẹp và keo.",
+      "inspection": "Kiểm tra độ phẳng, màu/lô, rỗng bộp, khe giãn nở, ron–nẹp, mép kết thúc, độ dốc và hồ sơ vật liệu ẩn."
+    },
+    "PLU": {
+      "label": "Thiết bị nước và khu ướt",
+      "maintenance": "Tẩy cặn bằng hóa chất nhẹ phù hợp, vệ sinh lưới lọc/xả và xử lý rò nhỏ sớm để tránh hỏng tủ, tường hoặc chống thấm.",
+      "installation": "Khóa kích thước chờ, áp lực, đường cấp–thoát, chống thấm và vùng thao tác; dùng gioăng, keo và phụ kiện đúng hệ.",
+      "inspection": "Ngâm/thử nước, kiểm tra rò tại mọi khớp, tốc độ thoát, mùi, độ vững, cao độ và khả năng tháo bảo trì."
+    },
+    "AUX": {
+      "label": "Vật tư phụ và hóa chất",
+      "maintenance": "Theo dõi nứt, co ngót, đổi màu hoặc bong; thay đường keo/nẹp khi mất đàn hồi hoặc kín nước thay vì phủ chồng tùy tiện.",
+      "installation": "Xác nhận nền vật liệu, độ ẩm, chuyển vị, chiều rộng khe, hóa chất vệ sinh và thời gian đóng rắn; không trộn sản phẩm khác hệ.",
+      "inspection": "Kiểm tra hạn dùng, số lô, bám dính, độ đầy khe, bề mặt hoàn thiện và điều kiện bảo dưỡng trước khi đưa vào sử dụng."
+    },
+    "LAB": {
+      "label": "Dịch vụ và công tác công trường",
+      "maintenance": "Lưu bản vẽ, biên bản, ảnh hiện trạng và thông tin đơn vị thực hiện để truy vết khi phát sinh hoặc bảo hành.",
+      "installation": "Khóa phạm vi, đầu ra, mốc duyệt, trách nhiệm phối hợp, số lần chỉnh sửa và điều kiện phát sinh trong hợp đồng hoặc phiếu giao việc.",
+      "inspection": "Nghiệm thu theo checklist và đầu ra đã thỏa thuận; mọi thay đổi phải có ảnh, khối lượng, đơn giá và xác nhận trước khi làm."
+    }
+  },
+  "figures": {
+    "entry": {
+      "src": "assets/guides/entry-storage.webp",
+      "alt": "Tủ giày và khu vực sảnh căn hộ",
+      "caption": "Sảnh nhỏ cần ưu tiên lối đi, chỗ ngồi thay giày và thông gió tủ hơn là tăng độ sâu lưu trữ.",
+      "credit": "Ảnh minh họa định hướng do AI tạo; cần đối chiếu mẫu và kích thước thực tế."
+    },
+    "living": {
+      "src": "assets/guides/living-room-sofa.jpg",
+      "alt": "Sofa trong phòng khách căn hộ",
+      "caption": "Sofa thẳng gọn giúp giữ lối đi và khoảng xem TV; tỷ lệ phòng quan trọng hơn số chỗ ngồi ghi trên catalogue.",
+      "credit": "Pixel.la, CC0, Wikimedia Commons",
+      "source": "https://commons.wikimedia.org/wiki/File:Couch-furniture-living-room-sofa_(24300293356).jpg"
+    },
+    "kitchen": {
+      "src": "assets/guides/modern-kitchen.webp",
+      "alt": "Tủ bếp, mặt bàn và thiết bị trong bếp hiện đại",
+      "caption": "Một hệ bếp hoàn chỉnh phải phối hợp kích thước tủ, mặt bàn, khoảng thao tác, điện nước và khe thoát nhiệt thiết bị.",
+      "credit": "Ảnh minh họa định hướng do AI tạo; không đại diện công trình hoặc sản phẩm cụ thể."
+    },
+    "countertop": {
+      "src": "assets/guides/quartz-countertop.webp",
+      "alt": "Bảng so sánh bề mặt granite, quartz, đá nung và inox",
+      "caption": "Theo thứ tự từ trái sang phải, trên xuống dưới: granite có khoáng tự nhiên; quartz đồng đều hơn; tấm nung mỏng và đặc; inox dễ nhận ra vết xước sử dụng.",
+      "credit": "Ảnh minh họa định hướng do AI tạo; cần xem và duyệt phiến/mẫu vật liệu thật."
+    },
+    "bedroom": {
+      "src": "assets/guides/bedroom-storage.webp",
+      "alt": "Phòng ngủ căn hộ với giường, tủ áo và bàn nhỏ",
+      "caption": "Phòng ngủ nhỏ nên khóa lối đi quanh giường, chiều mở cánh tủ và vị trí ổ cắm trước khi tăng thêm hộc lưu trữ.",
+      "credit": "Ảnh minh họa định hướng do AI tạo; không đại diện sản phẩm cụ thể."
+    },
+    "bathroom": {
+      "src": "assets/guides/bathroom-fixtures.webp",
+      "alt": "Phòng tắm có lavabo, bồn cầu, vách kính và gạch lát",
+      "caption": "Thiết bị đẹp chỉ bền khi cao độ chờ, độ dốc thoát, chống thấm, thông gió và khoảng bảo trì được xử lý đúng.",
+      "credit": "Ảnh minh họa định hướng do AI tạo; cao độ chờ và cấu tạo thực tế phải theo khảo sát."
+    },
+    "waterproofing-detail": {
+      "src": "assets/guides/bathroom-waterproofing-detail.webp",
+      "alt": "Mặt cắt cấu tạo chống thấm, tạo dốc và thoát sàn khu tắm",
+      "caption": "Chi tiết cắt lớp cho thấy màng chống thấm phải liên tục dưới lớp cán–lát, được gia cường ở góc và liên kết đúng với cụm phễu thoát.",
+      "credit": "Ảnh minh họa cấu tạo do AI tạo; hệ lớp và cao độ thi công phải được kỹ sư hoặc nhà thầu xác nhận theo hiện trạng."
+    },
+    "laundry": {
+      "src": "assets/guides/laundry-room.webp",
+      "alt": "Khu giặt có máy giặt và máy sấy",
+      "caption": "Khu giặt phải chừa chỗ mở cửa, rút lọc, khóa van và thông gió; tủ bao kín thiết bị thường gây khó bảo trì.",
+      "credit": "Ảnh minh họa định hướng do AI tạo; không đại diện model máy hoặc quy định lô gia cụ thể."
+    },
+    "flooring": {
+      "src": "assets/guides/laminate-installation.webp",
+      "alt": "Thi công sàn gỗ công nghiệp dạng hèm khóa",
+      "caption": "Bốn ô lần lượt minh họa kiểm tra sàn gạch, SPC có lớp lót, laminate lõi sợi gỗ và gỗ kỹ thuật nhiều lớp với nẹp chuyển tiếp.",
+      "credit": "Ảnh minh họa định hướng do AI tạo; cấu tạo thương mại phải xác minh bằng mẫu cắt thật."
+    },
+    "lighting": {
+      "src": "assets/guides/lighting-layout.webp",
+      "alt": "Bảng minh họa các lớp chiếu sáng trong căn hộ",
+      "caption": "Ánh sáng nền, ánh sáng tác vụ và ánh sáng nhấn giải quyết ba nhu cầu khác nhau; không nên dùng một loại đèn cho mọi vị trí.",
+      "credit": "Ảnh minh họa định hướng do AI tạo; không đại diện model đèn cụ thể."
+    },
+    "materials": {
+      "src": "assets/guides/board-hardware-materials.webp",
+      "alt": "Mẫu ván, lớp phủ, cạnh dán và phụ kiện tủ",
+      "caption": "Chất lượng đồ gỗ phụ thuộc đồng thời vào lõi ván, lớp phủ, cạnh dán, hậu tủ và phụ kiện—không thể đánh giá chỉ bằng tên màu bề mặt.",
+      "credit": "Ảnh minh họa định hướng do AI tạo; cần duyệt mẫu vật liệu thật."
+    },
+    "materials-detail": {
+      "src": "assets/guides/material-hardware-detail.webp",
+      "alt": "Cận cảnh mẫu lõi ván, lớp phủ, cạnh dán, đá và phụ kiện đồ gỗ",
+      "caption": "Mẫu cắt và phụ kiện rời giúp kiểm tra đồng thời lõi ván, lớp phủ, chất lượng cạnh dán, hoàn thiện kim loại và mức tương thích giữa các vật liệu.",
+      "credit": "Ảnh minh họa chi tiết do AI tạo; cần khóa mẫu vật liệu và đúng mã phụ kiện trong báo giá thực tế."
+    },
+    "site": {
+      "src": "assets/guides/site-protection.webp",
+      "alt": "Che chắn và kiểm tra công trường nội thất căn hộ",
+      "caption": "Che chắn, tập kết và vệ sinh là phần của chất lượng thi công vì chúng quyết định mức hư hại bề mặt bàn giao và quan hệ với tòa nhà.",
+      "credit": "Ảnh minh họa định hướng do AI tạo; quy trình thực tế phải theo nội quy tòa nhà."
+    }
+  },
+  "items": {
+    "ENT-SHOE": {
+      "intro": "Tủ giày là hệ lưu trữ ngay cửa vào, giữ giày dép, đồ đi ngoài và vật nhỏ trước khi chúng đi sâu vào căn hộ.",
+      "location": "Đặt tại sảnh, sát tường nhưng không lấn cửa, tủ điện, chuông hình hoặc bề rộng thoát người.",
+      "mandatory": "Không bắt buộc phải đóng tủ; chỉ nên làm khi số lượng giày và đồ sảnh đủ lớn, còn nhà ít người có thể dùng kệ rời thoáng.",
+      "commonTypes": "Kệ mở; tủ thấp; tủ cao kịch trần; tủ cánh lật; hệ tích hợp ghế, gương và hộc chìa khóa.",
+      "materials": "MDF chống ẩm/MFC phủ Melamine cho vùng khô; nhựa hoặc kim loại ở chân dễ ướt; bản lề, lỗ thoáng và khay hứng bụi tháo rửa.",
+      "priceFactors": "Chiều dài–cao, số cánh/hộc, vật liệu lõi và bề mặt, ghế/gương tích hợp, phụ kiện, xử lý tường lệch và vận chuyển.",
+      "pitfalls": "Tủ quá sâu làm hẹp sảnh, thiếu thoáng gây mùi, đợt cố định khó chứa giày cao, chân tủ gặp nước lau và cánh va cửa chính.",
+      "recommendation": "Với căn 61 m², ưu tiên tủ sâu khoảng nhu cầu thực, có khoang mở dùng hằng ngày và chừa một đoạn ngồi thay giày thay vì phủ kín toàn tường.",
+      "figure": "entry"
+    },
+    "ENT-ACC": {
+      "intro": "Nhóm gương, ghế và khay sảnh hỗ trợ kiểm tra trang phục, thay giày và gom chìa khóa–thư từ ở điểm chuyển tiếp.",
+      "location": "Treo hoặc đặt cạnh tủ giày, tránh vùng cánh cửa quét và không phản chiếu trực diện khu riêng tư nếu người dùng không muốn.",
+      "mandatory": "Là tiện ích tùy chọn; nên làm khi thao tác ra vào đang bất tiện, nhưng có thể bổ sung sau mà ít ảnh hưởng phần hoàn thiện.",
+      "commonTypes": "Gương đơn; gương kèm kệ; ghế rời; băng ghế có hộc; hệ ốp sảnh tích hợp đèn và móc treo.",
+      "materials": "Gương an toàn có xử lý cạnh; khung kim loại/gỗ; ghế bọc dễ lau; neo tường phù hợp và mép bo tránh va chạm.",
+      "priceFactors": "Kích thước gương, gia công cạnh/khung, loại kính, tải ghế, vật liệu bọc, đèn tích hợp và mức độ đóng theo đo.",
+      "pitfalls": "Gương neo yếu, cạnh sắc, ghế chắn lối, kệ ở tầm đầu trẻ nhỏ, ánh sáng chiếu chói hoặc vật liệu bọc dễ bẩn.",
+      "recommendation": "Chọn một gương đủ soi toàn thân hoặc bán thân và ghế nhỏ chịu tải rõ ràng; đừng mua cả bộ nếu sảnh không còn khoảng đứng thoải mái.",
+      "figure": "entry"
+    },
+    "LIV-SOFA": {
+      "intro": "Sofa là chỗ ngồi chính và là vật thể lớn nhất của phòng khách; kích thước, độ sâu ngồi và độ cứng nệm quyết định công năng nhiều hơn kiểu dáng ảnh mẫu.",
+      "location": "Đặt theo trục xem TV và lối vào phòng, giữ đường đi liên tục tới bếp, ban công và các phòng.",
+      "mandatory": "Cần chỗ ngồi nhưng không bắt buộc là sofa lớn; căn nhỏ có thể dùng sofa thẳng 2–3 chỗ kết hợp ghế rời.",
+      "commonTypes": "Sofa thẳng; sofa góc chữ L; sofa module; sofa bed; khung gỗ hoặc kim loại với nệm mút, lò xo hay hỗn hợp.",
+      "materials": "Khung gỗ sấy/plywood hoặc kim loại; mút có tỷ trọng công bố; vải dệt, microfiber, da công nghiệp hoặc da thật; chân và liên kết tháo lắp.",
+      "priceFactors": "Kích thước, cấu tạo khung–mút, chất liệu bọc, đường may, cơ cấu giường/module, thương hiệu, bảo hành và chi phí đưa vào căn.",
+      "pitfalls": "Chọn theo ảnh không ngồi thử, sofa quá sâu, tay vịn dày chiếm chỗ, vải khó vệ sinh, mút nhanh xẹp và không lọt thang máy.",
+      "recommendation": "căn hộ mẫu nên ưu tiên sofa thẳng gọn, ngồi thử ít nhất 15 phút và xác nhận mẫu vải dưới ánh sáng nhà; phân khúc trung cấp thường có tỷ lệ giá/giá trị tốt nhất.",
+      "figure": "living"
+    },
+    "LIV-TABLE": {
+      "intro": "Bàn trà hoặc bàn phụ tạo mặt đặt đồ trong vùng ngồi nhưng cũng là vật dễ cản lưu thông và gây va cạnh nhất.",
+      "location": "Nằm trước hoặc bên sofa, cần tính khoảng kéo chân, đi vòng và đường mở tủ/kệ TV.",
+      "mandatory": "Không bắt buộc; bàn phụ hoặc bàn lồng nhỏ thường linh hoạt hơn bàn trà lớn trong phòng khách hẹp.",
+      "commonTypes": "Bàn thấp cố định; bàn lồng; bàn nâng mặt; bàn phụ; mặt gỗ, kính, đá/ceramic trên khung gỗ hoặc kim loại.",
+      "materials": "Gỗ công nghiệp phủ Melamine/Laminate, gỗ tự nhiên, kính cường lực, ceramic/sintered và khung thép sơn; ưu tiên góc bo.",
+      "priceFactors": "Kích thước, vật liệu mặt, độ phức tạp chân/cơ cấu, gia công cạnh, độ ổn định và thương hiệu.",
+      "pitfalls": "Bàn quá cao hoặc quá lớn, chân vướng, cạnh sắc, kính không rõ tiêu chuẩn, mặt đá nặng và cơ cấu nâng kẹp tay.",
+      "recommendation": "Chỉ mua sau khi đặt sofa; dùng băng dính mô phỏng footprint trên sàn và chọn bàn nhẹ hoặc bàn lồng nếu cần giải phóng chỗ thường xuyên.",
+      "figure": "living"
+    },
+    "LIV-TVUNIT": {
+      "intro": "Kệ và mảng TV tổ chức thiết bị, dây nguồn–mạng, thông gió và bề mặt nhìn chính của phòng khách.",
+      "location": "Ở tường đối diện sofa, phải phối hợp ổ cắm, cáp mạng, loa, chiều cao tâm màn hình và lối bảo trì.",
+      "mandatory": "TV có thể treo trực tiếp hoặc đặt trên kệ rời; mảng ốp lớn là tùy chọn thẩm mỹ, không nên ưu tiên hơn điện và thông gió.",
+      "commonTypes": "Kệ rời; kệ treo; tường sơn đi dây; tấm ốp Melamine/Laminate; hệ tủ–đá trang trí tích hợp.",
+      "materials": "MDF/MFC phủ bề mặt, plywood, khung thép, đá hoặc tấm nung; ống chờ dây, lỗ thoát nhiệt và giá treo đúng tải.",
+      "priceFactors": "Diện tích ốp, số hộc/cánh, vật liệu, phụ kiện, gia cường giá treo, xử lý dây và độ phẳng tường.",
+      "pitfalls": "Ổ cắm bị che, dây không thay được, hộp máy quá nóng, cao độ TV sai, kệ nhô vào lối đi và trang trí nặng hơn giá trị sử dụng.",
+      "recommendation": "Giải pháp tường sơn + kệ treo phẳng thường đủ cho căn 61 m²; chỉ ốp lớn khi đã khóa TV, loa, dây và ngân sách phần thiết yếu.",
+      "figure": "living"
+    },
+    "LIV-TV": {
+      "intro": "TV là thiết bị hiển thị; giá trị sử dụng phụ thuộc kích thước theo khoảng xem, chất lượng tấm nền, xử lý hình ảnh và dịch vụ sau bán.",
+      "location": "Đặt/treo trên mảng TV, tránh phản xạ cửa sổ mạnh và chừa khe cho cổng kết nối, thoát nhiệt, giá treo.",
+      "mandatory": "Không bắt buộc cho hoàn thiện căn hộ và có thể mua sau; nên khóa kích thước dự kiến sớm để bố trí ổ và kệ.",
+      "commonTypes": "LED/LCD phổ thông; QLED; Mini LED; OLED; độ phân giải Full HD/4K với nhiều hệ điều hành và cỡ màn.",
+      "materials": "Tấm nền, đèn nền hoặc điểm ảnh tự phát sáng; bo xử lý, loa, chân/giá treo và cổng HDMI/eARC là các phần cần so model cụ thể.",
+      "priceFactors": "Cỡ màn, công nghệ tấm nền, độ sáng/tương phản, tần số quét, xử lý hình, thương hiệu, năm model và chính sách lỗi điểm ảnh.",
+      "pitfalls": "Mua quá lớn cho khoảng xem, so theo tên công nghệ thay vì model, bỏ qua phản xạ, thiếu cổng, treo quá cao hoặc không kiểm tra bảo hành tấm nền.",
+      "recommendation": "Đối với phòng khách căn hộ, TV 50–55 inch 4K trung cấp thường cân bằng; nâng lên OLED/Mini LED chỉ đáng khi chất lượng hình thực sự là ưu tiên và kiểm soát được ánh sáng.",
+      "figure": "living"
+    },
+    "LIV-CURTAIN": {
+      "intro": "Rèm điều tiết sáng, riêng tư, nhiệt và âm mềm; hiệu quả phụ thuộc vải, độ phủ, ray và cách xử lý hộp rèm.",
+      "location": "Lắp tại cửa sổ/cửa ban công, tránh cản cánh mở, điều hòa và đường đi; ray thường chạy hết bề rộng mảng cửa.",
+      "mandatory": "Cần giải pháp riêng tư và chống chói, nhưng có thể chọn rèm vải, rèm cuốn hoặc phim tùy cửa; motor không bắt buộc.",
+      "commonTypes": "Rèm một lớp cản sáng; hai lớp voan + cản sáng; rèm cuốn; roman; rèm motor.",
+      "materials": "Polyester dệt, vải pha, lớp phủ cản sáng, voan; ray nhôm, móc, dây kéo an toàn hoặc motor và nguồn chờ.",
+      "priceFactors": "Mét ngang, chiều cao, độ nhún, loại vải/lớp lót, ray, hộp rèm, motor, may hoàn thiện và tháo giặt.",
+      "pitfalls": "Đo thiếu phủ sáng, vải co/khó giặt, ray yếu, rèm chạm sàn ẩm, dây nguy hiểm cho trẻ và motor không có lối bảo trì.",
+      "recommendation": "Rèm hai lớp phổ thông có ray tốt thường đáng tiền nhất cho phòng khách; yêu cầu mẫu lớn và kiểm tra màu cả ban ngày lẫn buổi tối.",
+      "figure": "living"
+    },
+    "LIV-CLIMATE": {
+      "intro": "Điều hòa và quạt kiểm soát nhiệt, ẩm và chuyển động không khí; công suất đúng tải và cách lắp quyết định hiệu quả hơn số tính năng trên ứng dụng.",
+      "location": "Dàn lạnh/quạt đặt để luồng gió không thổi trực tiếp chỗ ngồi lâu; dàn nóng, ống và thoát nước theo vị trí tòa nhà cho phép.",
+      "mandatory": "Tùy khí hậu và thói quen; quạt có thể đủ ở thời tiết nhẹ, còn điều hòa nên chọn sau tính tải nhiệt chứ không chỉ theo diện tích.",
+      "commonTypes": "Quạt đứng/tuần hoàn; quạt trần; điều hòa treo tường inverter; dòng lọc khí/Wi‑Fi; hệ multi-split.",
+      "materials": "Máy nén, dàn trao đổi nhiệt, quạt, lọc, ống đồng–bảo ôn, dây điện, giá đỡ và ống thoát ngưng.",
+      "priceFactors": "Công suất, hiệu suất, độ ồn, tính năng, chiều dài ống, cao độ dàn nóng, khoan/rút chân không và bảo hành lắp đặt.",
+      "pitfalls": "Chọn thiếu/thừa công suất, ống thoát ngược dốc, bảo ôn hở, không hút chân không, quạt trần vướng trần/đèn và khó vệ sinh lọc.",
+      "recommendation": "Khóa tải nhiệt và điều kiện lắp trước khi chọn hãng; gói máy trung cấp lắp đúng thường hiệu quả hơn máy cao cấp nhưng thi công ẩu.",
+      "figure": "lighting"
+    },
+    "LIV-DECOR": {
+      "intro": "Thảm, gối và đồ trang trí bổ sung độ êm, màu sắc và hấp thụ âm sau khi các vật lớn đã ổn định.",
+      "location": "Tập trung tại vùng sofa, mảng tường hoặc kệ; không chiếm lối đi, che ổ điện hay tạo điểm bám bụi khó vệ sinh.",
+      "mandatory": "Hoàn toàn tùy chọn và nên mua sau cùng để tránh sai tỷ lệ, màu hoặc làm hụt ngân sách phần thiết yếu.",
+      "commonTypes": "Thảm rời; gối tựa; tranh/in; cây và chậu; đồ gốm; đèn trang trí nhỏ.",
+      "materials": "Sợi tổng hợp hoặc len, vải tháo giặt, khung kính/acrylic, gốm, kim loại và vật liệu tự nhiên có bề mặt dễ làm sạch.",
+      "priceFactors": "Kích thước, sợi/chất liệu, kỹ thuật dệt/in, tác giả/thương hiệu, khung, vận chuyển và công treo.",
+      "pitfalls": "Mua sớm, thảm quá nhỏ, quá nhiều vật nhỏ, vật liệu giữ bụi, màu không hợp ánh sáng thật và neo tranh không đúng nền tường.",
+      "recommendation": "Dành ngân sách nhỏ theo từng đợt, ưu tiên thảm đủ kích thước và vỏ gối tháo giặt; dừng khi phòng đã có một điểm nhấn rõ.",
+      "figure": "living"
+    },
+    "KIT-CAB": {
+      "intro": "Tủ bếp là hệ thân–cánh–hậu–phụ kiện bao quanh thao tác nấu, rửa và lưu trữ; cấu tạo vùng nước và liên kết quan trọng hơn màu cánh.",
+      "location": "Tủ dưới, tủ trên và tủ cao theo tuyến bếp, phối hợp chậu, bếp, hút mùi, tủ lạnh, ổ điện và khoảng đứng.",
+      "mandatory": "Cần một mức lưu trữ và mặt thao tác tối thiểu; có thể giữ tủ bàn giao hoặc làm cục bộ nếu kết cấu còn tốt.",
+      "commonTypes": "Tủ module mua sẵn; MDF/MFC đóng đo; plywood; thùng chống nước ở khoang chậu; inox/nhôm cho vùng ẩm cao.",
+      "materials": "Lõi ván, lớp phủ Melamine/Laminate/Acrylic/sơn, cạnh dán, hậu tủ, chân–len, ray bản lề và vật liệu chống nước cục bộ.",
+      "priceFactors": "Mét dài và chiều cao, vật liệu thân/cánh/hậu, phụ kiện, số ngăn kéo, bề mặt, khoang thiết bị, xử lý góc và điều kiện vận chuyển.",
+      "pitfalls": "Báo giá không tách thân–cánh, hậu mỏng, cạnh hở, khoang chậu dùng MDF thường, thiếu thoát nhiệt, sai kích thước thiết bị và ổ điện bị chôn.",
+      "recommendation": "Dùng MDF chống ẩm hoặc tương đương cho vùng khô, vật liệu chịu nước thật tại khoang chậu; đầu tư ray/bản lề ở vị trí dùng nhiều trước khi nâng bề mặt bóng.",
+      "figure": "kitchen"
+    },
+    "KIT-TOP": {
+      "intro": "Mặt bàn là bề mặt làm việc chịu nước, nhiệt, va đập và lỗ khoét; ốp bếp bảo vệ tường khỏi dầu và nước.",
+      "location": "Nằm trên tủ dưới và đoạn tường giữa tủ dưới–tủ trên, bao quanh chậu và bếp.",
+      "mandatory": "Cần bề mặt làm việc chịu ẩm; không bắt buộc dùng đá cao cấp hoặc ốp cùng vật liệu toàn bộ.",
+      "commonTypes": "Granite tự nhiên; quartz nhân tạo; đá nung/sintered; solid surface acrylic; inox; ốp gạch, kính hoặc cùng đá.",
+      "materials": "Tấm đá 15–20 mm hoặc tấm mỏng có nền đỡ; keo, thanh gia cường, bo cạnh, len tường, kính/gạch và xử lý lỗ khoét.",
+      "priceFactors": "Loại/lô tấm, chiều dày, khổ và hao hụt, cạnh, lỗ khoét, chậu âm, mối nối, vận chuyển lên tầng, nền đỡ và ốp tường.",
+      "pitfalls": "Chọn theo mẫu nhỏ, không duyệt phiến, đỡ yếu tại lỗ khoét, mối nối sai vị trí, đá thấm chưa xử lý, cạnh tấm nung dễ sứt và đặt nồi nóng trực tiếp lên quartz.",
+      "recommendation": "Granite tốt hoặc quartz trung cấp có nguồn rõ thường hợp căn 61 m²; nâng lên tấm nung chỉ khi cần đặc tính bề mặt và có đơn vị gia công chuyên.",
+      "figure": "countertop"
+    },
+    "KIT-HDW": {
+      "intro": "Phụ kiện tủ bếp gồm bản lề, ray, tay nâng, rổ và cơ cấu góc; chúng quyết định cảm giác sử dụng và khả năng tiếp cận lưu trữ.",
+      "location": "Ẩn trong cánh, ngăn kéo, tủ trên, tủ góc và khoang chai/lương thực.",
+      "mandatory": "Bản lề và ray cơ bản là bắt buộc; rổ kéo, tay nâng và cơ cấu đặc biệt chỉ nên dùng khi giải quyết đúng nhu cầu.",
+      "commonTypes": "Bản lề thường/giảm chấn; ray bi/ray âm; ngăn kéo hộp; tay nâng; rổ inox; mâm góc và tủ kho kéo.",
+      "materials": "Thép mạ, inox, nhựa kỹ thuật, giảm chấn và bộ liên kết; quan trọng là mã tải, kích thước khoang và khả năng mua lẻ thay thế.",
+      "priceFactors": "Thương hiệu/dòng, tải, số chu kỳ, giảm chấn, chiều dài ray, số bộ, cơ cấu đặc biệt và công khoan lắp–cân chỉnh.",
+      "pitfalls": "Dùng cao cấp tràn lan, không khóa mã, thiếu số lượng, rổ không vừa khoang, ray quá tải, mạ kém ở vùng ẩm và không có phụ tùng.",
+      "recommendation": "Đầu tư bản lề và ray ngăn kéo dùng hằng ngày; chỉ mua phụ kiện góc/tủ kho sau khi mô phỏng thao tác và so phần thể tích thực sự lấy được.",
+      "figure": "materials-detail"
+    },
+    "KIT-SINK": {
+      "intro": "Chậu và vòi là trạm rửa chính, chịu nước liên tục; độ sâu lòng, thoát, thép/vật liệu và cách lắp ảnh hưởng trực tiếp đến vệ sinh.",
+      "location": "Trong khoang chậu của tủ dưới, gần cấp–thoát nước, máy lọc hoặc máy rửa chén nếu có.",
+      "mandatory": "Bắt buộc có chức năng rửa, nhưng không cần chậu hai hố hay vòi nhiều chế độ nếu mặt bàn và thói quen không phù hợp.",
+      "commonTypes": "Chậu inox một/hai hố, lắp nổi/âm/bán âm; chậu granite composite; vòi cố định, dây rút hoặc tích hợp đường lọc.",
+      "materials": "Inox 304 với chiều dày công bố, composite, gioăng–xả, siphon, vòi đồng/inox, dây cấp và van góc.",
+      "priceFactors": "Kích thước, vật liệu/độ dày, hoàn thiện bề mặt, bộ xả, vòi, phụ kiện, kiểu lắp âm và công khoét–gia cường.",
+      "pitfalls": "Chậu quá lớn làm yếu đá, lòng quá nông bắn nước, xả khó vệ sinh, vòi vướng cửa sổ, thép không rõ mác và silicone bị che lỗi.",
+      "recommendation": "Một hố đủ lớn bằng inox 304, bộ xả tốt và vòi có tầm với đúng thường hữu dụng hơn chậu hai hố nhỏ hoặc nhiều phụ kiện trang trí.",
+      "figure": "kitchen"
+    },
+    "KIT-HOB": {
+      "intro": "Bếp từ tạo nhiệt trực tiếp trong đáy nồi bằng cảm ứng điện từ; hiệu quả và an toàn phụ thuộc điện cấp, thoát nhiệt và nồi tương thích.",
+      "location": "Âm hoặc đặt trên mặt bàn, cách chậu và vách đủ thao tác, bên dưới có khoang thoáng theo hướng dẫn model.",
+      "mandatory": "Cần thiết bị nấu nhưng có thể là bếp đơn/rời; bếp đôi âm chỉ nên khoét khi đã khóa đúng model.",
+      "commonTypes": "Bếp đơn; bếp đôi domino; bếp đôi kích thước phổ biến; bếp ba vùng; dòng có vùng nấu linh hoạt.",
+      "materials": "Mặt kính ceramic, cuộn từ, bo công suất, quạt, cảm biến; dây nguồn, CB, đầu nối và gioăng lắp theo hãng.",
+      "priceFactors": "Số vùng/công suất, mặt kính, bo mạch, điều khiển, tính năng an toàn, xuất xứ, bảo hành và đường điện riêng.",
+      "pitfalls": "Khoét đá trước khi có máy, dây/CB thiếu tải, bít khe gió, dùng ổ cắm rời không phù hợp, mua theo nhãn xuất xứ mơ hồ và nồi đáy cong.",
+      "recommendation": "Bếp đôi inverter trung cấp, bảo hành rõ và đường điện riêng thường đủ; ưu tiên độ ổn định mức công suất thấp và dịch vụ hơn số chế độ nấu.",
+      "figure": "kitchen"
+    },
+    "KIT-HOOD": {
+      "intro": "Máy hút mùi thu dầu, hơi và mùi tại nguồn; hiệu quả thật phụ thuộc chụp hút, lưu lượng tại trở lực và đường ống, không chỉ con số quảng cáo.",
+      "location": "Trên bếp, theo cao độ an toàn của thiết bị, nối ống ra trục hoặc dùng tuần hoàn nếu không thể thoát ngoài.",
+      "mandatory": "Nên có với bếp căn hộ kín; dòng nhỏ gọn đủ dùng nếu đường ống ngắn và thói quen nấu vừa phải.",
+      "commonTypes": "Âm tủ kéo; kính cong/chữ T; nghiêng; âm bàn; hút xả ống hoặc tuần hoàn qua than hoạt tính.",
+      "materials": "Vỏ inox/kính, motor, lưới lọc mỡ, van một chiều, ống cứng/mềm, cút và than lọc.",
+      "priceFactors": "Kích thước, motor/độ ồn, điều khiển, vật liệu, chiều dài–số cút ống, khoan lỗ và cấu tạo tủ che.",
+      "pitfalls": "Ống quá nhỏ/nhiều cút, xả lại phòng, đặt quá cao, khó tháo lưới, tủ che kín motor và không thay than khi chạy tuần hoàn.",
+      "recommendation": "Ưu tiên đường ống ngắn, tiết diện đúng và lưới dễ rửa; máy phổ thông lắp tốt thường hút hiệu quả hơn model mạnh nhưng ống nghẹt.",
+      "figure": "kitchen"
+    },
+    "KIT-DINING": {
+      "intro": "Bộ bàn ghế ăn là vùng ăn uống và làm việc phụ; độ thoải mái ghế, chiều cao và khoảng kéo ghế quyết định việc có dùng thường xuyên hay không.",
+      "location": "Giữa bếp và phòng khách, tránh cắt lối giao thông hoặc cản mở tủ lạnh/tủ bếp.",
+      "mandatory": "Cần chỗ ăn nhưng có thể dùng bàn gấp, bàn bar hoặc bàn 2–4 chỗ tùy số người và diện tích.",
+      "commonTypes": "Bàn chữ nhật/tròn; bàn mở rộng/gấp; mặt gỗ, kính, đá/ceramic; ghế gỗ, kim loại hoặc bọc nệm.",
+      "materials": "Gỗ công nghiệp/tự nhiên, veneer, kính cường lực, ceramic, khung thép; mặt ghế vải/da công nghiệp dễ vệ sinh.",
+      "priceFactors": "Kích thước, cơ cấu mở rộng, vật liệu mặt/khung, chất lượng ghế, hoàn thiện cạnh, thương hiệu và vận chuyển.",
+      "pitfalls": "Bàn quá dài, ghế đẹp nhưng ngồi đau, chân bàn vướng đầu gối, mặt quá nặng, cạnh sắc và thiếu khoảng kéo ghế.",
+      "recommendation": "Bàn 1,2–1,4 m cùng bốn ghế gọn thường phù hợp; ngồi thử ghế và mô phỏng vùng kéo ghế trước khi chọn vật liệu cao cấp.",
+      "figure": "kitchen"
+    },
+    "KIT-FRIDGE": {
+      "intro": "Tủ lạnh bảo quản thực phẩm liên tục; dung tích hữu dụng, kích thước thật, thông gió và dịch vụ quan trọng hơn số cửa.",
+      "location": "Đầu tuyến bếp hoặc khoang tủ cao, cửa mở không chặn lối và có thể kéo máy ra vệ sinh/bảo trì.",
+      "mandatory": "Là thiết bị thiết yếu với đa số gia đình nhưng có thể mua sau; bắt buộc khóa kích thước trước khi đóng hộc bao quanh.",
+      "commonTypes": "Ngăn đá trên/dưới; side-by-side; multi-door; counter-depth; dòng có lấy nước/đá ngoài.",
+      "materials": "Vỏ thép, lớp cách nhiệt, máy nén inverter, dàn lạnh, quạt, gioăng, khay và bo điều khiển.",
+      "priceFactors": "Dung tích, kiểu cửa, độ sâu, hiệu suất, công nghệ bảo quản, hoàn thiện, tính năng nước/đá, thương hiệu và bảo hành máy nén.",
+      "pitfalls": "Chỉ đo bề rộng, thiếu khe thoáng, cửa không mở đủ lấy khay, máy nhô quá sâu, ổ cắm sau máy khó rút và tủ nước/đá tăng bảo trì.",
+      "recommendation": "Chọn dung tích theo hộ gia đình và model vừa hộc với khe thoáng đúng; dòng 2–3 cửa trung cấp thường hiệu quả hơn multi-door lớn trong căn 61 m².",
+      "figure": "kitchen"
+    },
+    "BR1-BED": {
+      "intro": "Giường đỡ nệm và tạo khoảng ngủ; nệm quyết định nâng đỡ cơ thể, còn khung quyết định độ vững, tiếng kêu và lưu trữ.",
+      "location": "Trong phòng ngủ chính, chừa lối hai bên hoặc ít nhất một bên, không chặn tủ, cửa và ổ cắm đầu giường.",
+      "mandatory": "Cần bề mặt ngủ an toàn nhưng có thể bắt đầu bằng nệm trên đế phù hợp; giường tích hợp lớn không bắt buộc.",
+      "commonTypes": "Khung rời + nệm; giường gỗ công nghiệp/tự nhiên; giường bọc; giường có hộc/nâng; nệm foam, lò xo, latex hoặc hybrid.",
+      "materials": "Khung gỗ/kim loại, vạt giường, liên kết, vải bọc; lõi nệm foam, lò xo túi, cao su và lớp áo tháo giặt.",
+      "priceFactors": "Kích thước, cấu tạo nệm, độ dày, khung–đầu giường, hộc/cơ cấu nâng, vải bọc, vận chuyển và thử/đổi nệm.",
+      "pitfalls": "Mua nệm không nằm thử, giường quá lớn, vạt thiếu đỡ, cơ cấu nâng nặng, đầu giường che ổ và vật liệu bọc giữ bụi.",
+      "recommendation": "Ưu tiên ngân sách cho nệm đã thử trực tiếp; khung đơn giản, vững và đúng kích thước thường tốt hơn giường nhiều hộc nhưng khó vệ sinh.",
+      "figure": "bedroom"
+    },
+    "BR1-WARD": {
+      "intro": "Tủ áo bảo quản quần áo theo chiều treo, gấp và phụ kiện cá nhân; bố cục bên trong quyết định dung lượng sử dụng thật.",
+      "location": "Theo tường phòng ngủ, chừa khoảng mở cánh/ngăn kéo và tránh che ổ điện, cửa sổ, điều hòa.",
+      "mandatory": "Cần lưu trữ nhưng có thể dùng tủ rời hoặc làm sau; tủ kịch trần chỉ đáng khi nhu cầu và khả năng thi công phù hợp.",
+      "commonTypes": "Tủ rời; tủ đóng cánh mở; cánh trượt; tủ kịch trần; hệ kính–nhôm; walk-in nhỏ.",
+      "materials": "MDF/MFC phủ Melamine/Laminate, plywood, khung nhôm kính, hậu tủ, cạnh dán, ray/bản lề và thanh treo.",
+      "priceFactors": "Chiều dài–cao–sâu, vật liệu, số cánh/ngăn kéo, phụ kiện, cánh kính, xử lý trần/tường và chia khoang.",
+      "pitfalls": "Khoang treo sai chiều cao, quá nhiều đợt cố định, cánh va giường, hậu áp tường ẩm, ray trượt giảm bề rộng mở và tủ không tháo chuyển được.",
+      "recommendation": "Kiểm kê quần áo trước khi chia khoang; cánh mở với bản lề tốt thường dễ tiếp cận và bảo trì hơn cánh trượt nếu còn đủ khoảng mở.",
+      "figure": "bedroom"
+    },
+    "BR1-AUX": {
+      "intro": "Tab đầu giường và bàn trang điểm tạo mặt đặt đồ, ánh sáng cá nhân và lưu trữ nhỏ trong vùng ngủ.",
+      "location": "Cạnh giường hoặc tường trống, phối hợp ổ cắm, gương, ghế và lối mở tủ.",
+      "mandatory": "Không bắt buộc; một kệ treo nhỏ có thể thay tab, còn bàn trang điểm chỉ nên làm khi có nhu cầu dùng thường xuyên.",
+      "commonTypes": "Tab rời; kệ treo; tab tích hợp đầu giường; bàn trang điểm nhỏ; bàn gập hoặc kết hợp bàn làm việc.",
+      "materials": "Gỗ công nghiệp/tự nhiên, kim loại, kính/gương an toàn, ray ngăn kéo và bề mặt chống bám bẩn.",
+      "priceFactors": "Kích thước, số hộc, treo tường, gương/đèn, vật liệu bề mặt, ghế và mức độ đồng bộ với giường/tủ.",
+      "pitfalls": "Chiếm lối, góc sắc, ngăn kéo va giường, gương gây chói, ổ điện bị che và mặt khó vệ sinh mỹ phẩm.",
+      "recommendation": "Giữ mỗi bên giường một mặt đặt tối thiểu và nguồn điện an toàn; tránh hệ đóng liền tường nếu nhu cầu phòng còn thay đổi.",
+      "figure": "bedroom"
+    },
+    "BR1-CURTAIN": {
+      "intro": "Rèm phòng ngủ kiểm soát sáng và riêng tư để hỗ trợ giấc ngủ; độ kín sáng phụ thuộc cả vải lẫn khe trên–hai bên–dưới.",
+      "location": "Tại cửa sổ/cửa ban công phòng ngủ, không cản điều hòa hoặc đồ gỗ sát cửa.",
+      "mandatory": "Cần một giải pháp che sáng/riêng tư; motor và rèm hai lớp là tùy chọn theo thói quen.",
+      "commonTypes": "Rèm cản sáng một lớp; hai lớp; rèm cuốn blackout; roman; rèm motor.",
+      "materials": "Polyester dệt/phủ, lớp lót blackout, voan, ray nhôm, móc và cơ cấu kéo an toàn.",
+      "priceFactors": "Kích thước, độ nhún, mức cản sáng, vải/lót, ray, hộp rèm, motor và công tháo giặt.",
+      "pitfalls": "Vẫn lọt sáng quanh mép, vải mùi/khó giặt, ray ồn, rèm vướng tủ và dây kéo không an toàn.",
+      "recommendation": "Ưu tiên mẫu cản sáng đã thử bằng đèn phía sau và ray vận hành êm; màu trung tính dễ phối hơn vải hiệu ứng đắt tiền.",
+      "figure": "bedroom"
+    },
+    "BR1-CLIMATE": {
+      "intro": "Điều hòa phòng ngủ cần duy trì nhiệt ổn định ở tải thấp và độ ồn nhỏ trong thời gian dài.",
+      "location": "Dàn lạnh tránh thổi thẳng đầu/giường; đường ống ngắn, thoát ngưng có dốc và dàn nóng đúng vị trí tòa nhà.",
+      "mandatory": "Tùy nhu cầu; nên tính tải theo phòng 14,4 m², nắng, số người và thiết bị thay vì mặc định theo diện tích.",
+      "commonTypes": "Treo tường inverter 1–1,5 HP; dòng có cảm biến, lọc khí, Wi‑Fi hoặc kiểm soát ẩm.",
+      "materials": "Dàn lạnh/nóng, ống đồng–bảo ôn, dây, CB, ống ngưng, giá đỡ và vật tư xuyên tường.",
+      "priceFactors": "Công suất/hiệu suất, độ ồn, chiều dài ống, vị trí dàn nóng, tính năng và chất lượng đội lắp.",
+      "pitfalls": "Gió thổi trực tiếp, chọn máy quá lớn chạy đóng-ngắt, ống ngưng rò, bảo ôn đọng sương và khó tháo lọc.",
+      "recommendation": "Ưu tiên độ ồn, kiểm soát tải thấp và lắp đúng; các tính năng lọc cao cấp chỉ đáng khi có quy trình thay/vệ sinh rõ.",
+      "figure": "bedroom"
+    },
+    "BR2-BED": {
+      "intro": "Giường phòng nhỏ phải đáp ứng ngủ an toàn trong khi giữ diện tích học, chơi và thay đổi theo tuổi người dùng.",
+      "location": "Trong phòng 9,85 m², tránh chặn cửa, tủ, cửa sổ và luồng điều hòa; xem xét mép rơi nếu dùng giường cao.",
+      "mandatory": "Cần chỗ ngủ nhưng không bắt buộc giường tầng, bục hoặc hệ tích hợp; đồ rời thường thích nghi tốt hơn.",
+      "commonTypes": "Giường đơn; divan; giường có hộc; giường tầng/loft; bục tích hợp bàn–tủ.",
+      "materials": "Khung gỗ/kim loại, vạt, nệm foam/lò xo/latex, ray hộc và lan can–thang nếu giường cao.",
+      "priceFactors": "Kích thước, cấu tạo nệm, hộc kéo, độ cao, lan can/thang, hệ tích hợp và gia cường.",
+      "pitfalls": "Tích hợp quá cứng, góc sắc, lan can thấp, thang khó dùng, hộc không mở được và nệm sai độ dày với lan can.",
+      "recommendation": "Ưu tiên giường đơn chắc, nệm tốt và đồ rời; chỉ dùng loft khi có chiều cao, neo kết cấu và người sử dụng phù hợp.",
+      "figure": "bedroom"
+    },
+    "BR2-WARD": {
+      "intro": "Tủ áo phòng nhỏ cần đủ cho nhu cầu hiện tại nhưng có cấu trúc điều chỉnh được khi quần áo và chiều cao người dùng thay đổi.",
+      "location": "Theo tường ít ảnh hưởng ánh sáng và bàn học, chừa vùng mở cánh/ngăn kéo.",
+      "mandatory": "Cần lưu trữ nhưng tủ rời hoặc module có thể phù hợp hơn hệ tích hợp cố định trong phòng trẻ.",
+      "commonTypes": "Tủ rời thấp; tủ đóng cánh mở; cánh trượt; tủ kịch trần; tủ tích hợp giường/bàn.",
+      "materials": "MDF/MFC phủ bề mặt ít phát thải, cạnh kín, hậu tủ, bản lề/rail và thanh treo điều chỉnh.",
+      "priceFactors": "Kích thước, vật liệu, phụ kiện, chia khoang, cánh trượt/tích hợp và neo chống lật.",
+      "pitfalls": "Không neo chống lật, tay nắm/góc nguy hiểm, đợt không điều chỉnh, cánh va bàn và thiết kế trẻ con nhanh lỗi thời.",
+      "recommendation": "Chọn bố cục đơn giản, đợt thay đổi được và neo tường; dành khoảng trống cho nhu cầu tăng thay vì lấp kín mọi centimet.",
+      "figure": "bedroom"
+    },
+    "BR2-DESK": {
+      "intro": "Bàn học và kệ tạo tư thế làm việc, mặt đặt thiết bị và lưu trữ sách; ghế, ánh sáng và cao độ phải được xem như một hệ.",
+      "location": "Gần ánh sáng tự nhiên nhưng tránh chói màn hình, không quay lưng vào lối hẹp hoặc cản cửa/tủ.",
+      "mandatory": "Cần bề mặt học/làm việc nếu phòng được sử dụng theo chức năng này; kệ lớn và bàn nâng hạ là tùy chọn.",
+      "commonTypes": "Bàn rời; bàn treo; bàn kèm hộc; hệ bàn–kệ đóng đo; bàn nâng hạ.",
+      "materials": "Mặt gỗ công nghiệp/tự nhiên, khung thép, cạnh bo, ray hộc, giá dây và neo kệ.",
+      "priceFactors": "Kích thước, khung/cơ cấu, mặt bàn, số hộc/kệ, quản lý dây, ghế và mức độ đóng theo đo.",
+      "pitfalls": "Mặt quá nông, cao độ không hợp, kệ trên đầu neo yếu, dây rối, ánh sáng chói và gộp ghế kém vào ngân sách bàn.",
+      "recommendation": "Ưu tiên bàn sâu đủ thiết bị và ghế điều chỉnh phù hợp người dùng; kệ chỉ làm theo số sách thực, tránh hệ kín tường.",
+      "figure": "bedroom"
+    },
+    "BR2-CURTAIN": {
+      "intro": "Rèm phòng ngủ nhỏ kiểm soát sáng, riêng tư và nhiệt; cơ cấu phải an toàn với trẻ em.",
+      "location": "Tại cửa sổ, không cản bàn học, giường, tủ hoặc luồng điều hòa.",
+      "mandatory": "Cần che sáng/riêng tư; kiểu rèm chọn theo vị trí nội thất và mức cản sáng.",
+      "commonTypes": "Rèm vải cản sáng; hai lớp; cuốn blackout; roman; rèm không dây/motor.",
+      "materials": "Vải polyester/lót, ray nhôm, cơ cấu cuốn và chi tiết an toàn dây.",
+      "priceFactors": "Kích thước, vải/lót, ray/cơ cấu, mức cản sáng, may và motor.",
+      "pitfalls": "Dây vòng nguy hiểm, rèm sát bàn bẩn, lọt sáng, ray yếu và vải khó giặt.",
+      "recommendation": "Chọn cơ cấu không dây hoặc cố định dây an toàn, vải dễ vệ sinh và màu bền; không cần motor nếu cửa dễ tiếp cận.",
+      "figure": "bedroom"
+    },
+    "BR2-CLIMATE": {
+      "intro": "Điều hòa phòng nhỏ cần chạy êm và không tạo luồng gió mạnh trực tiếp lên giường hoặc bàn học.",
+      "location": "Dàn lạnh ở tường cho phép phân phối gió đều, chừa bảo trì và có tuyến thoát ngưng đúng dốc.",
+      "mandatory": "Tùy nhu cầu; tải lạnh cần tính riêng cho phòng 9,85 m² để tránh máy quá lớn.",
+      "commonTypes": "Điều hòa inverter công suất nhỏ; dòng cảm biến, lọc hoặc điều khiển Wi‑Fi; quạt tuần hoàn bổ trợ.",
+      "materials": "Cụm máy, ống đồng–bảo ôn, dây/CB, ống ngưng và giá dàn nóng.",
+      "priceFactors": "Dải công suất, hiệu suất/độ ồn, chiều dài ống, vị trí lắp, tính năng và bảo hành.",
+      "pitfalls": "Máy quá công suất, gió thổi thẳng, thoát ngưng rò, tiếng rung truyền tường và điều khiển phụ thuộc app.",
+      "recommendation": "Chọn máy có dải tải thấp và đội lắp tốt; kiểm tra độ ồn thực tế quan trọng hơn tính năng thông minh.",
+      "figure": "bedroom"
+    },
+    "BAT-WP": {
+      "intro": "Chống thấm và thoát sàn là hệ ẩn ngăn nước đi vào kết cấu/khu bên dưới và đưa nước nhanh về phễu.",
+      "location": "Dưới lớp lát khu tắm, quanh chân tường, cổ ống, phễu và các vị trí xuyên sàn.",
+      "mandatory": "Là điều kiện kỹ thuật bắt buộc khi can thiệp khu ướt; nếu giữ nguyên bàn giao chỉ sửa sau khi xác định đúng nguyên nhân.",
+      "commonTypes": "Trám sửa cục bộ; màng xi măng–polymer; màng lỏng PU/acrylic; màng tấm; hệ phễu và lớp cán dốc.",
+      "materials": "Vữa sửa, lớp lót, màng chống thấm, lưới gia cường, băng góc, vữa bảo vệ, keo chà ron và phễu.",
+      "priceFactors": "Diện tích nhỏ nhưng nhiều chi tiết, mức tháo dỡ, xử lý nền/nứt, số lớp, cao chân tường, cổ ống, thử ngâm và hoàn trả gạch.",
+      "pitfalls": "Quét lên nền bẩn/ẩm sai, bỏ góc và cổ ống, không thử ngâm, dốc về phễu sai, khoan xuyên màng sau hoàn thiện và chỉ trét ron để chữa rò kết cấu.",
+      "recommendation": "Chẩn đoán nguồn rò trước; nếu làm lại phải dùng trọn hệ, có ảnh lớp ẩn và biên bản thử ngâm trước khi cán/lát.",
+      "figure": "waterproofing-detail"
+    },
+    "BAT-SCREEN": {
+      "intro": "Vách tắm giữ nước trong vùng tắm để sàn khô hơn, đồng thời vẫn phải cho người dùng ra vào và vệ sinh an toàn.",
+      "location": "Bao quanh vùng sen theo hình thẳng, góc hoặc cửa mở; phối hợp dốc sàn, phễu và thiết bị.",
+      "mandatory": "Không bắt buộc nếu dùng rèm tắm hoặc chấp nhận toàn sàn ướt; hữu ích trong phòng tắm nhỏ dùng thường xuyên.",
+      "commonTypes": "Tấm cố định; cửa mở quay; cửa lùa; vách góc; rèm tắm.",
+      "materials": "Kính an toàn cường lực/ghép lớp theo thiết kế, phụ kiện inox/đồng, gioăng, tay nắm và keo trung tính.",
+      "priceFactors": "Diện tích/độ dày kính, kiểu cửa, phụ kiện, khoét lỗ, vận chuyển, tường lệch và xử lý ngưỡng.",
+      "pitfalls": "Kính không chứng từ, cửa va thiết bị, mép sắc, ray khó vệ sinh, bắt vít vào đường ống và silicone mốc.",
+      "recommendation": "Nếu đủ cung mở, cửa quay ít ray thường dễ vệ sinh; ưu tiên kính và phụ kiện có nguồn cùng đo thực tế sau lát.",
+      "figure": "bathroom"
+    },
+    "BAT-VANITY": {
+      "intro": "Tủ chậu và tủ gương chứa đồ vệ sinh quanh lavabo, nơi thường xuyên có nước bắn và cần tiếp cận siphon–van.",
+      "location": "Dưới/trên lavabo, chừa khoảng người đứng, cửa phòng, bồn cầu và vùng tắm.",
+      "mandatory": "Lavabo cần mặt/giá đỡ phù hợp; tủ dưới và tủ gương là tùy chọn nếu phòng nhỏ hoặc vùng bắn nước lớn.",
+      "commonTypes": "Tủ treo PVC/nhôm; tủ WPB/plywood xử lý; tủ rời; tủ gương nông; module đồng bộ lavabo.",
+      "materials": "PVC, nhôm, plywood/WPB xử lý cạnh, inox, gương an toàn, bản lề chống ăn mòn và hậu thoáng.",
+      "priceFactors": "Kích thước, vật liệu chịu nước, mặt/chậu, gương–đèn, phụ kiện, khoét ống và mức đóng đo.",
+      "pitfalls": "Dùng MDF tiêu chuẩn, cạnh hở, đáy chạm sàn, che van/siphon, cánh va bồn cầu và ổ điện quá gần nước.",
+      "recommendation": "Tủ treo bằng vật liệu chịu nước thật, có đáy tháo kiểm tra và tủ gương nông thường là cấu hình bền, dễ lau cho phòng 4,3 m².",
+      "figure": "bathroom"
+    },
+    "BAT-SANITARY": {
+      "intro": "Bồn cầu và lavabo là thiết bị sứ tiếp xúc trực tiếp với người dùng; hình học, xả, men và kích thước chờ quyết định trải nghiệm.",
+      "location": "Theo vị trí ống chờ cố định trong phòng tắm, giữ khoảng ngồi/đứng và cửa mở.",
+      "mandatory": "Là thiết bị thiết yếu, nhưng chỉ thay đồ bàn giao khi có vấn đề công năng, kích thước hoặc vệ sinh rõ.",
+      "commonTypes": "Bồn cầu hai khối, một khối, treo tường, điện tử; lavabo đặt bàn, âm, bán âm, treo hoặc liền tủ.",
+      "materials": "Sứ tráng men, bộ xả, nắp, gioăng, bích nối; khung âm với loại treo tường.",
+      "priceFactors": "Kiểu cấu tạo, men/xả, kích thước, nắp điện tử, phụ kiện lắp, thay đổi chờ và dịch vụ linh kiện.",
+      "pitfalls": "Sai tâm xả, bồn quá dài, lavabo bắn nước, thiếu phụ tùng, khung âm khó bảo trì và mua combo không vừa phòng.",
+      "recommendation": "Giữ thiết bị bàn giao nếu hoạt động tốt; khi thay, khóa tâm xả và kích thước trước, ưu tiên model phổ biến có phụ tùng hơn tính năng hiếm.",
+      "figure": "bathroom"
+    },
+    "BAT-SHOWER": {
+      "intro": "Sen vòi trộn nước và tạo tia tắm; van lõi, lớp mạ, áp lực và khả năng thay phụ tùng quyết định độ bền.",
+      "location": "Trong vùng tắm, theo cao độ người dùng và vị trí chờ nóng–lạnh hiện hữu.",
+      "mandatory": "Cần một bộ sen hoạt động; sen cây, nhiệt độ hoặc âm tường là nâng cấp tùy áp lực và khả năng bảo trì.",
+      "commonTypes": "Sen tay; sen cây; trộn cơ; trộn nhiệt; sen âm tường; nhiều chế độ tia.",
+      "materials": "Thân đồng/inox, lõi van ceramic, dây, bát sen nhựa/kim loại, gioăng, van một chiều và lớp mạ.",
+      "priceFactors": "Vật liệu thân/lõi, kiểu lắp, bộ chia, kích thước bát, trộn nhiệt, lớp mạ và linh kiện.",
+      "pitfalls": "Áp lực không đủ, chờ sai khoảng, lớp mạ khó vệ sinh, âm tường không cửa bảo trì, nước nóng không ổn định và hàng nhái.",
+      "recommendation": "Bộ trộn cơ hoặc sen cây trung cấp có lõi và phụ tùng rõ thường đáng tiền; chỉ làm âm tường khi đã khóa model và điểm bảo trì.",
+      "figure": "bathroom"
+    },
+    "BAT-VENT": {
+      "intro": "Quạt hút đưa hơi ẩm và mùi ra trục, giúp bề mặt khô và giảm nguy cơ mốc; lưu lượng thực phụ thuộc trở lực đường ống.",
+      "location": "Trên trần/tường gần nguồn ẩm nhưng không nằm trong vùng điện nguy hiểm; nối đúng trục và có van một chiều.",
+      "mandatory": "Cần thông gió hiệu quả trong phòng tắm không có cửa sổ; phải kiểm tra trục trước khi mua quạt mạnh.",
+      "commonTypes": "Quạt gắn tường/trần; nối ống; quạt có van; cảm biến ẩm/timer; dòng áp tĩnh cao.",
+      "materials": "Motor, cánh, lưới, van một chiều, ống/cút, kẹp và nguồn điện điều khiển.",
+      "priceFactors": "Lưu lượng tại áp, độ ồn, cảm biến, đường kính/chiều dài ống, mở trần và nguồn điều khiển.",
+      "pitfalls": "Chọn theo lưu lượng tự do, ống bóp/mềm dài, thiếu van, đấu chung đèn không đủ thời gian hút, tiếng rung và không vệ sinh được.",
+      "recommendation": "Đo/kiểm tra đường gió trước; ưu tiên quạt chạy êm, có van và hẹn giờ đủ lâu hơn tính năng điều khiển phức tạp.",
+      "figure": "bathroom"
+    },
+    "BAT-ACC": {
+      "intro": "Phụ kiện phòng tắm gồm móc, thanh khăn, kệ, lô giấy và tay vịn; tải neo và vị trí thao tác quan trọng hơn số lượng.",
+      "location": "Trong tầm với nhưng ngoài luồng nước trực tiếp khi có thể, không cản cửa/vách hoặc tạo cạnh va.",
+      "mandatory": "Chỉ các điểm thực sự phục vụ thao tác mới cần; tay vịn chịu lực là hạng mục an toàn phải có nền neo phù hợp.",
+      "commonTypes": "Móc đơn; thanh khăn; kệ góc; lô giấy; gương phụ; thanh/tay vịn.",
+      "materials": "Inox 304, đồng mạ, nhôm, kính; vít nở/neo hóa chất theo nền và keo chỉ dùng đúng tải thiết kế.",
+      "priceFactors": "Vật liệu, lớp hoàn thiện, số món, tải, loại neo, khoan gạch và thương hiệu.",
+      "pitfalls": "Inox mác thấp rỉ, dán keo cho tải lớn, khoan trúng ống, đặt lô giấy trong vùng ướt và mua bộ quá nhiều món.",
+      "recommendation": "Lập sơ đồ thao tác rồi mua từng món; dùng inox 304 nguồn rõ và neo cơ học cho thanh/tay vịn chịu lực.",
+      "figure": "bathroom"
+    },
+    "LOG-WASHER": {
+      "intro": "Máy giặt xử lý tải vải bằng nước, chất giặt và chuyển động; tải kg, kiểu cửa, chương trình và khả năng bảo trì phải hợp hộ gia đình.",
+      "location": "Tại lô gia gần cấp–thoát và ổ điện, có mặt phẳng vững, chỗ mở cửa và rút lọc.",
+      "mandatory": "Thiết yếu với đa số gia đình nhưng có thể mua sau; phải chừa sẵn chờ và footprint model dự kiến.",
+      "commonTypes": "Cửa trên; cửa trước; giặt–sấy; máy sấy riêng bơm nhiệt/thoát hơi; xếp chồng.",
+      "materials": "Lồng inox, motor, bơm, gioăng, bo mạch, dây cấp–thoát và chân cân bằng.",
+      "priceFactors": "Tải, kiểu cửa, motor/độ ồn, giặt–sấy, cảm biến, hiệu suất, thương hiệu, chân đế và lắp đặt.",
+      "pitfalls": "Thiếu khoảng mở cửa/lọc, thoát quá cao, nền rung, tủ bao kín, ổ điện trong vùng nước và kỳ vọng sấy combo như máy riêng.",
+      "recommendation": "Máy cửa trước 8–10 kg trung cấp thường hợp gia đình nhỏ; ưu tiên dịch vụ và bố trí bảo trì trước tính năng Wi‑Fi.",
+      "figure": "laundry"
+    },
+    "LOG-CAB": {
+      "intro": "Tủ giặt chứa chất tẩy, dụng cụ và che một phần thiết bị/ống nhưng nằm trong môi trường nóng ẩm và nước bắn.",
+      "location": "Trên hoặc cạnh máy giặt, không che van, lọc, ổ điện, cửa máy và đường thông gió.",
+      "mandatory": "Không bắt buộc; kệ kim loại rời có thể đủ và dễ thay nếu lô gia hẹp hoặc mưa tạt.",
+      "commonTypes": "Kệ rời; tủ treo PVC/nhôm; tủ cao cạnh máy; hệ bao máy bằng WPB hoặc kim loại.",
+      "materials": "Nhôm, inox, PVC, WPB/plywood xử lý cạnh; phụ kiện chống ăn mòn và khe thoáng.",
+      "priceFactors": "Kích thước, vật liệu chịu nước, cửa, kệ, che ống, xử lý trần/tường và mức độ đóng đo.",
+      "pitfalls": "Dùng MDF thường, bao máy quá kín, che van/lọc, chân gặp nước, cánh va máy và lưu hóa chất trong tầm trẻ em.",
+      "recommendation": "Tủ nhôm/PVC treo trên máy, có khe thoáng và khoang khóa hóa chất là cấu hình thực dụng; luôn chừa khả năng kéo máy ra.",
+      "figure": "laundry"
+    },
+    "LOG-DRY": {
+      "intro": "Giàn phơi tạo vùng treo đồ theo phương đứng/ngang; tải neo, thao tác và khả năng tránh mưa gió quyết định độ an toàn.",
+      "location": "Trên trần hoặc tường lô gia, không vướng dàn nóng, cửa, đèn và đường thoát người.",
+      "mandatory": "Cần giải pháp phơi nếu không dùng máy sấy; có thể dùng giá rời, quay tay hoặc điện.",
+      "commonTypes": "Giá chữ A; thanh gắn tường; giàn trần quay tay; giàn điện nâng hạ/sấy.",
+      "materials": "Nhôm/inox, cáp, puly, tay quay hoặc motor, thanh phơi và bộ neo.",
+      "priceFactors": "Số thanh/tải, vật liệu, cơ cấu, chiều cao trần, gia cường nền, điện và bảo hành motor.",
+      "pitfalls": "Neo vào trần giả, cáp/puly kém, vướng dàn nóng, tải lệch, tay quay khó tiếp cận và motor không có phương án hạ tay.",
+      "recommendation": "Giàn quay tay cơ khí tốt thường cân bằng chi phí–bảo trì; xác minh nền neo và vùng quét trước khi nâng cấp điện.",
+      "figure": "laundry"
+    },
+    "LOG-FLOOR": {
+      "intro": "Sàn lô gia chịu nước, nắng và rung thiết bị; lớp lát, dốc, phễu và chống thấm phải làm việc như một hệ.",
+      "location": "Toàn mặt lô gia, đặc biệt quanh máy giặt, chân tường, cửa và phễu.",
+      "mandatory": "Phải bảo đảm thoát nước và không rò; không cần thay gạch nếu hiện trạng đạt và chỉ có lỗi ron nhẹ.",
+      "commonTypes": "Giữ và vệ sinh; chà ron/trám cục bộ; lát chồng có kiểm soát; tháo lát và làm lại dốc–chống thấm.",
+      "materials": "Gạch chống trượt, keo dán/chà ron, vữa dốc, màng chống thấm, phễu và silicone khe chuyển tiếp.",
+      "priceFactors": "Mức tháo dỡ, diện tích nhỏ, xử lý dốc/phễu, chống thấm, loại gạch, vận chuyển xà bần và thử nước.",
+      "pitfalls": "Lát chồng làm cao ngưỡng, dốc ngược, phễu bị thu nhỏ, chỉ trám bề mặt khi rò dưới lớp lát và khoan chân máy xuyên màng.",
+      "recommendation": "Đổ thử nước và theo dõi trước khi quyết định; giữ hiện trạng nếu thoát tốt, chỉ làm lại toàn hệ khi có bằng chứng lỗi dốc/chống thấm.",
+      "figure": "laundry"
+    },
+    "COM-FLOOR": {
+      "intro": "Sàn là lớp hoàn thiện chịu đi lại, kê đồ, vệ sinh và độ ẩm; nền dưới và chi tiết mép thường quyết định tuổi thọ hơn tên vân.",
+      "location": "Các khu khô của căn hộ; vùng ướt cần hệ gạch/chống thấm riêng.",
+      "mandatory": "Phải có bề mặt sử dụng an toàn nhưng nên giữ sàn bàn giao nếu phẳng, chắc và phù hợp ngân sách.",
+      "commonTypes": "Gạch bàn giao; SPC hèm khóa; laminate 8/12 mm; gỗ kỹ thuật; gạch/đá hoặc vật liệu dán.",
+      "materials": "Tấm sàn, lớp lót, hèm/keo, nẹp, len chân tường, khe giãn nở và lớp xử lý nền.",
+      "priceFactors": "Vật liệu theo m², hao hụt, độ phẳng/ẩm nền, tháo dỡ, lớp lót, nẹp/len, cắt cửa và di chuyển đồ.",
+      "pitfalls": "Lát lên nền ẩm/lồi lõm, thiếu khe giãn, trộn lô, nẹp yếu, quảng cáo chống nước tuyệt đối và không tính cao độ cửa.",
+      "recommendation": "Giữ sàn tốt là phương án giá trị nhất; nếu thay, laminate 12 mm hoặc SPC có nguồn rõ chỉ đáng khi nền và chi tiết mép được xử lý đúng.",
+      "figure": "flooring"
+    },
+    "COM-CEIL": {
+      "intro": "Trần che kỹ thuật, tạo mặt phẳng và bố trí đèn/rèm; mọi hạ trần đều làm giảm chiều cao và tăng điểm nứt/bảo trì.",
+      "location": "Trên toàn phòng hoặc cục bộ tại hộp rèm, tuyến ống, đèn và vùng kỹ thuật.",
+      "mandatory": "Không bắt buộc làm trần mới nếu trần bàn giao tốt; chỉ nên làm cục bộ để giải quyết kỹ thuật hoặc ánh sáng rõ ràng.",
+      "commonTypes": "Giữ trần; hộp/dải cục bộ; trần thạch cao phẳng; tấm chịu ẩm; trần tiêu âm/trang trí.",
+      "materials": "Khung kim loại, tấm thạch cao/xi măng, vít, băng lưới, bột xử lý mối nối, sơn và cửa thăm.",
+      "priceFactors": "Diện tích nhỏ, cao độ, loại khung/tấm, số lớp, khe–hộp, gia cường đèn/rèm, cửa thăm và xử lý sơn.",
+      "pitfalls": "Hạ quá thấp, thiếu cửa thăm, khung thưa, mối nối sai, treo vật nặng vào tấm, che rò nước và không phối hợp điện/điều hòa.",
+      "recommendation": "Giữ trần và dùng đèn nổi là tiết kiệm; hộp rèm hoặc dải cục bộ chỉ làm sau khi khóa cao độ, thiết bị và vị trí bảo trì.",
+      "figure": "lighting"
+    },
+    "COM-PAINT": {
+      "intro": "Hệ sơn gồm chuẩn bị nền, bả/lót và lớp phủ; lớp phủ chỉ đẹp bền khi nguyên nhân ẩm, nứt và bám bẩn đã được xử lý.",
+      "location": "Tường và trần khu khô; khu ẩm cần kiểm soát nguồn nước và sản phẩm phù hợp.",
+      "mandatory": "Chỉ sơn lại khi màu/bề mặt không đạt; vá dặm có thể đủ nếu nền bàn giao tốt và truy được màu gần đúng.",
+      "commonTypes": "Vá dặm; sơn kinh tế; sơn chùi rửa; chống bám bẩn/kháng mốc; sơn khoáng hoặc hiệu ứng.",
+      "materials": "Vữa vá, bột bả, lót kháng kiềm, sơn phủ, băng che và vật tư xử lý nứt; cần khóa đúng dòng, mã và độ bóng.",
+      "priceFactors": "Diện tích, tình trạng nền, số lớp, bả/lót, màu đậm, độ bóng/tính năng, che chắn, chiều cao và sửa ẩm/nứt.",
+      "pitfalls": "Sơn phủ che ẩm, bỏ lót, pha loãng quá mức, nghiệm thu khi còn ướt, lệch màu vá, không làm mẫu và dùng tên hãng thay cho mã dòng.",
+      "recommendation": "Sơn chùi rửa phổ thông với chuẩn bị nền tốt thường đáng tiền nhất; dòng hiệu ứng/cao cấp ít tăng công năng cho căn hộ 61 m².",
+      "figure": "materials"
+    },
+    "COM-LIGHT": {
+      "intro": "Chiếu sáng cung cấp ánh sáng nền, tác vụ và nhấn; quang thông, phân bố, chói và hoàn màu quan trọng hơn số watt.",
+      "location": "Trần, tủ bếp, bàn, gương và các vùng thao tác; chia mạch theo cách sử dụng thực.",
+      "mandatory": "Cần ánh sáng an toàn nhưng không cần trần phức tạp hoặc đèn thông minh; có thể tận dụng điểm chờ.",
+      "commonTypes": "Đèn ốp/downlight; ray/spot; đèn bàn–đọc; LED tủ có profile; đèn gương; dimming/tunable.",
+      "materials": "LED, driver, tản nhiệt, chóa/tán quang, profile nhôm, dây–công tắc và bộ điều khiển.",
+      "priceFactors": "Quang thông/CRI, driver, chống chói, kích thước khoét, số điểm/mạch, profile–nguồn, điều khiển và công trần.",
+      "pitfalls": "Đèn sau lưng người thao tác, quá nhiều điểm gây chói, sai nhiệt độ màu, driver khó thay, LED dán không tản nhiệt và một công tắc bật tất cả.",
+      "recommendation": "Dùng nền 3000–4000 K tùy phòng, CRI tốt tại bàn/gương và thêm LED dưới tủ bếp; phân lớp vừa đủ hiệu quả hơn tăng số đèn trang trí.",
+      "figure": "lighting"
+    },
+    "COM-ELECTRIC": {
+      "intro": "Hệ điện đưa nguồn và điều khiển tới thiết bị; an toàn tải, bảo vệ, tiếp địa và khả năng kiểm tra là điều kiện loại.",
+      "location": "Tủ điện, dây âm/nẹp, ổ cắm, công tắc và điểm chờ trên toàn căn.",
+      "mandatory": "Bắt buộc kiểm tra trước khi bổ sung tải; chỉ cải tạo phần cần thiết và tuân thủ quy định tòa nhà.",
+      "commonTypes": "Giữ/kiểm tra hiện trạng; đi dây nổi trong nẹp; bổ sung âm cục bộ; mạch riêng tải lớn; điều khiển thông minh.",
+      "materials": "Dây/cáp đúng tiết diện, ống/nẹp, CB/RCD, hộp, ổ–công tắc, đầu nối, tiếp địa và nhãn mạch.",
+      "priceFactors": "Số điểm, chiều dài/tuyến, công suất tải, đục hoàn trả, thiết bị bảo vệ, hãng mặt ổ và kiểm tra đo lường.",
+      "pitfalls": "Nối xoắn giấu kín, dùng ổ chung tải lớn, thiếu tiếp địa/RCD, dây sai tiết diện, hộp chôn sau tủ và hệ thông minh mất điều khiển tay.",
+      "recommendation": "Đầu tư kiểm tra và mạch riêng cho bếp/điều hòa trước mặt ổ cao cấp; mọi mối nối cần nằm trong hộp có thể tiếp cận.",
+      "figure": "lighting"
+    },
+    "COM-BOARD": {
+      "intro": "Ván là lõi tạo thân/cánh đồ gỗ; tên “chống ẩm” chỉ mô tả khả năng chịu ẩm tốt hơn, không đồng nghĩa chịu ngâm nước.",
+      "location": "Tủ bếp, tủ áo, kệ, bàn và các chi tiết đóng; vùng nước cần vật liệu chuyên biệt.",
+      "mandatory": "Phải khóa vật liệu cho đồ đóng nhưng có thể phối nhiều loại theo vùng thay vì dùng một cấp cho toàn căn.",
+      "commonTypes": "MFC/MDF thường; MDF chống ẩm; plywood; WPB/PVC; inox/nhôm; phủ Melamine, Laminate, Acrylic hoặc sơn.",
+      "materials": "Lõi ván, lớp phủ hai mặt, cạnh ABS/PVC, keo, hậu tủ và cấu tạo chống ẩm ở mép/lỗ khoan.",
+      "priceFactors": "Loại–độ dày lõi, chứng từ phát thải, lớp phủ, màu/vân, dán cạnh, gia công CNC, khổ hao hụt và số lượng.",
+      "pitfalls": "Chỉ xem màu bề mặt, tráo lõi, cạnh hở, phủ một mặt gây cong, dùng MDF ở khoang có thể ngập và không giữ mẫu mã lô.",
+      "recommendation": "MDF chống ẩm phủ Melamine cân bằng cho vùng khô; dùng WPB/PVC/nhôm/inox cục bộ vùng nước thay vì nâng toàn bộ lên vật liệu đắt.",
+      "figure": "materials-detail"
+    },
+    "COM-HARDWARE": {
+      "intro": "Phụ kiện đồ gỗ truyền tải chuyển động và tải của cánh/ngăn; chất lượng phụ thuộc đúng mã, đúng tải và lắp chính xác.",
+      "location": "Bên trong mọi tủ, ngăn kéo, cánh nâng, cửa trượt và cơ cấu đặc biệt.",
+      "mandatory": "Cần phần cứng cơ bản; giảm chấn và phụ kiện cao cấp chỉ đầu tư tại điểm dùng nhiều hoặc tải lớn.",
+      "commonTypes": "Bản lề; ray bi/âm/hộp; tay nâng; ray cửa trượt; khóa, tay nắm và cơ cấu góc.",
+      "materials": "Thép mạ/inox, nhựa kỹ thuật, piston/giảm chấn, vít và plate; cần mã tải, góc mở, chiều dài.",
+      "priceFactors": "Dòng sản phẩm, tải/chu kỳ, giảm chấn, số lượng, cơ cấu, bảo hành và công khoan–cân chỉnh.",
+      "pitfalls": "Báo giá theo phần trăm không có mã, phụ kiện quá cấp ở vị trí ít dùng, thiếu vít đúng loại, không chừa chỉnh và hàng nhái.",
+      "recommendation": "Khóa bảng kê từng mã và số lượng; dùng dòng phổ thông tốt ở đa số vị trí, nâng cấp ray/ngăn tải nặng thay vì toàn bộ.",
+      "figure": "materials-detail"
+    },
+    "COM-AUX": {
+      "intro": "Keo, nẹp và vật tư phụ tạo liên kết, kín nước và kết thúc mép; chúng nhỏ về chi phí nhưng có thể quyết định lỗi thấm, nứt hoặc bong.",
+      "location": "Khe đá–tường, khu vệ sinh, mép sàn, mối nối tấm, nẹp góc và các vị trí chuyển vật liệu.",
+      "mandatory": "Cần đúng vật tư cho từng mối nối; không có một loại silicone/keo dùng tốt cho mọi nền và mọi chuyển vị.",
+      "commonTypes": "Silicone trung tính; silicone vệ sinh; PU/MS polymer; epoxy; keo dán tấm; nẹp nhôm/inox/PVC.",
+      "materials": "Polymer, chất đóng rắn, primer, backer rod, băng che và profile; phải kiểm tra tương thích nền.",
+      "priceFactors": "Hóa chất/hệ, dung tích, primer, màu, số mét khe, xử lý nền cũ, độ khó tiếp cận và profile hoàn thiện.",
+      "pitfalls": "Dùng keo axit ăn mòn, bơm lên bề mặt bẩn, khe quá sâu không backer rod, phủ chồng keo mốc, dùng epoxy nơi cần đàn hồi và hàng quá hạn.",
+      "recommendation": "Ghi rõ hóa chất theo từng vị trí và số lô; ưu tiên thi công nền sạch, đầy khe và đúng thời gian đóng rắn hơn chọn màu keo đẹp.",
+      "figure": "materials"
+    },
+    "COM-SITE": {
+      "intro": "Công tác công trường bao gồm che chắn, vận chuyển, tập kết, vệ sinh và phối hợp tòa nhà để thi công không làm hỏng phần giữ lại.",
+      "location": "Từ sảnh/thang máy đến toàn căn, đặc biệt đường vận chuyển, khu cắt và bề mặt bàn giao.",
+      "mandatory": "Bắt buộc ở mức phù hợp với nội quy; quy mô tăng theo lượng tháo dỡ, bụi, vật nặng và việc căn hộ có người ở.",
+      "commonTypes": "Chủ nhà tự điều phối; che chắn cơ bản; gói chung cư tiêu chuẩn; gói có tháo dỡ bụi; công trình đang ở.",
+      "materials": "Tấm bảo vệ sàn, màng/bạt, băng dính phù hợp, góc bảo vệ, máy hút bụi, bao xà bần và dụng cụ vận chuyển.",
+      "priceFactors": "Thời gian, quy định tòa, số lượt vận chuyển, diện tích che, tháo dỡ, vệ sinh, phí/đặt cọc và điều kiện giờ làm.",
+      "pitfalls": "Không chụp hiện trạng, băng dính làm hỏng sơn/sàn, che không kín bụi, xà bần quá tải, thiếu lịch thang và tranh chấp hư hỏng khu chung.",
+      "recommendation": "Gói chung cư tiêu chuẩn có ảnh bàn giao, sơ đồ bảo vệ và người chịu trách nhiệm thường đáng tiền; khóa phí tòa nhà riêng khỏi giá thi công.",
+      "figure": "site"
+    },
+    "COM-DESIGN": {
+      "intro": "Khảo sát, thiết kế và giám sát biến nhu cầu thành bản vẽ, khối lượng và quyết định có thể thi công–nghiệm thu.",
+      "location": "Bao phủ toàn căn và các điểm giao giữa kiến trúc, đồ gỗ, điện nước, thiết bị và nhà thầu.",
+      "mandatory": "Mức tài liệu tối thiểu là bắt buộc với đồ đóng và cải tạo kỹ thuật; độ sâu dịch vụ tùy quy mô và năng lực chủ nhà tự quản.",
+      "commonTypes": "Chủ nhà tự đo; freelancer; studio có hồ sơ kỹ thuật; đơn vị thiết kế–giám sát; tổng thầu thiết kế–thi công.",
+      "materials": "Đầu ra gồm hiện trạng, layout, kích thước, điện nước, chi tiết, bảng vật liệu, BOQ, shop drawing review và biên bản hiện trường.",
+      "priceFactors": "Diện tích/phạm vi, số bản vẽ–phối cảnh, số vòng sửa, khảo sát, giám sát, độ phức tạp và trách nhiệm phối hợp.",
+      "pitfalls": "Chỉ mua phối cảnh, đầu ra mơ hồ, không đo lại, không quản lý thay đổi, thiết kế không theo ngân sách và đơn vị vừa duyệt vừa tự nghiệm thu mình.",
+      "recommendation": "Với căn 61 m² và ngân sách 150 triệu, ưu tiên gói đo + layout + điện nước + shop drawing/BOQ hơn nhiều phối cảnh; khóa đầu ra trước khi ký.",
+      "figure": "site"
+    }
+  }
+}

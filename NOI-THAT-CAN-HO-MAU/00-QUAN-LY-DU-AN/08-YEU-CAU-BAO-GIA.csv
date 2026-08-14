@@ -1,0 +1,3 @@
+rfq_line,item_id,room,description,required_spec,quantity,unit,include_material,include_accessories,include_installation,include_transport,include_tax,warranty_required,lead_time_required,site_constraints,requested_alternative,exclusions_to_declare
+RFQ-001,KIT-CAB,KIT,Tu bep theo shop drawing,Ghi ro loi van be mat hau dan canh ray ban le va khoang chong nuoc,0,md,YES,YES,YES,YES,DECLARE,12 thang,DECLARE,Chung cu gio thi cong va thang may,YES,ALL
+

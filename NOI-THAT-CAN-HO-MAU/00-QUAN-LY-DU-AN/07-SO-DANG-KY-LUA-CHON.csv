@@ -1,0 +1,3 @@
+decision_id,item_id,option_id,room,selected_name,brand_model,material_color,size,quantity,unit,budget_cap,quoted_total,supplier,lead_time,warranty,status,approved_by,approved_date,sample_code,evidence_link,alternative_option,reason,notes
+DEC-001,KIT-CAB,KIT-CAB-03,KIT,,,,,,md,0,0,,, ,SO-SANH,,YYYY-MM-DD,,,,,,
+
