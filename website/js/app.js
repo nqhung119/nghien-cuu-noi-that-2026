@@ -44,20 +44,21 @@
     }).join("");
   };
 
-  function renderRoute() {
+  function renderRoute(options) {
+    const preserveScroll = Boolean(options && options.preserveScroll);
     const route = KB.route.parse();
     if (route.type === "selection") {
-      KB.Selection.show();
+      KB.Selection.show({ preserveScroll: preserveScroll });
       return;
     }
     if (route.type === "option") {
       const option = KB.maps.options[route.id];
-      if (option) KB.Content.showOption(option);
+      if (option) KB.Content.showOption(option, { preserveScroll: preserveScroll });
       else KB.Content.showMissing();
       return;
     }
     const sourceDocument = KB.maps.documents[route.id];
-    if (sourceDocument) KB.Content.showDocument(sourceDocument);
+    if (sourceDocument) KB.Content.showDocument(sourceDocument, { preserveScroll: preserveScroll });
     else KB.Content.showMissing();
   }
 
