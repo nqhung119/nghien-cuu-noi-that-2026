@@ -532,7 +532,7 @@
           }
           this.comparisonSelections[itemId] = current;
           const parent = this.maps.documents[itemId.toLowerCase()];
-          if (parent) this.showDocument(parent);
+          if (parent) this.showDocument(parent, { preserveScroll: true });
           return;
         }
 
@@ -552,17 +552,17 @@
       });
     },
 
-    showDocument: function (document) {
+    showDocument: function (document, options) {
       this.root.dataset.sourcePath = document.path || "";
       this.root.innerHTML = renderDocument(document, this.data, this.maps);
-      this.afterRender(document.id, document.groupId, document.title, document);
+      this.afterRender(document.id, document.groupId, document.title, document, null, options);
     },
 
-    showOption: function (option) {
+    showOption: function (option, options) {
       const result = renderOption(option, this.data, this.maps);
       this.root.dataset.sourcePath = result.parent ? result.parent.path : option.sourceFile;
       this.root.innerHTML = result.html;
-      this.afterRender(result.parent ? result.parent.id : "", result.parent ? result.parent.groupId : "", option.name, result.parent, option);
+      this.afterRender(result.parent ? result.parent.id : "", result.parent ? result.parent.groupId : "", option.name, result.parent, option, options);
     },
 
     showMissing: function () {
@@ -570,8 +570,8 @@
       document.getElementById("page-toc").innerHTML = "";
     },
 
-    afterRender: function (activeDocumentId, groupId, title, sourceDocument, option) {
-      window.scrollTo(0, 0);
+    afterRender: function (activeDocumentId, groupId, title, sourceDocument, option, options) {
+      if (!(options && options.preserveScroll)) window.scrollTo(0, 0);
       KB.Sidebar.setActive(activeDocumentId, groupId);
       KB.Toc.render(this.root);
       KB.renderBreadcrumb(groupId, title, sourceDocument, option);

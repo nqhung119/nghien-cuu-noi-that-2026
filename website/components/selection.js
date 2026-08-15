@@ -102,7 +102,7 @@
         if (select) {
           const result = this.toggle(select.dataset.selectOption);
           this.announce(result);
-          if (KB.renderRoute) KB.renderRoute();
+          if (KB.renderRoute) KB.renderRoute({ preserveScroll: true });
           return;
         }
 
@@ -112,7 +112,7 @@
           delete this.items[remove.dataset.removeSelection];
           this.save();
           this.announce(row ? "Đã bỏ " + row.itemTitle + " khỏi danh sách." : "Đã bỏ phương án.");
-          if (KB.renderRoute) KB.renderRoute();
+          if (KB.renderRoute) KB.renderRoute({ preserveScroll: true });
           return;
         }
 
@@ -137,7 +137,7 @@
         if (quantity) item.quantity = clamp(quantity.value, 0.01, 1000000, 1);
         if (base) item.basePrice = clamp(base.value, 0, 1000000000000000, 0);
         this.save();
-        if (KB.renderRoute) KB.renderRoute();
+        if (KB.renderRoute) KB.renderRoute({ preserveScroll: true });
       });
     },
 
@@ -273,11 +273,11 @@
       };
     },
 
-    show: function () {
+    show: function (options) {
       const report = this.getReport();
       this.root.dataset.sourcePath = "";
       this.root.innerHTML = renderPage(report);
-      window.scrollTo(0, 0);
+      if (!(options && options.preserveScroll)) window.scrollTo(0, 0);
       KB.Sidebar.setActive("", "");
       KB.Toc.render(this.root);
       KB.renderBreadcrumb("", "Phương án đã chọn");
